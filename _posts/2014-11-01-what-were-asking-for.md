@@ -4,13 +4,14 @@ title: What We're Asking For
 author: Matt Amos
 ---
 
-The OpenStreetMap project mostly consists of a global community of
-dedicated and resourceful people, giving their time to make the best
-map of the world. However, there are some small additional things
-such as having a shared repository to upload their contributions to,
-services to help them make the map and talk to eachother. We are
-asking for donations to keep these services running and improve them,
-so that everyone else can continue making an amazing map.
+The OpenStreetMap project is a global community of dedicated and
+resourceful people, giving their time to make the best map of the
+world. Those mappers' contributions are the largest part of the
+project. However, there are some small additional things such as
+having a shared repository to upload their contributions to, services
+to help them make the map and talk to eachother. We are asking for
+donations to keep these services running and improve them, so that
+everyone else can continue making an amazing map.
 
 ## Secondary database server
 
@@ -24,10 +25,11 @@ website and API on it.
 At the moment, the disks on that machine are configured in a
 [high performance][2] setup and we will try to make some space
 available by reconfiguring in a [slightly lower perfomance][3]
-setup. However, should the primary server fail and all the website and
-API database queries move to the secondary, this might mean that the
-site and API become slower. We don't want the site and API to be
-slower - we want a great experience for those dedicated contributors.
+setup. This may mean slower queries to the secondary machine, and
+worse API performance. This would be even worse, should the primary
+server fail and all the website and API database queries move to the
+secondary. We don't want the site and API to be slower --- we want a
+great experience for those dedicated contributors.
 
 To avoid this, it would be better to have a machine closer in
 [specification][4] and performance to the primary database server in
@@ -44,10 +46,10 @@ community.
 
 We want to be able to continue to serve up minutely-updated tiles to
 everyone who is helping make OpenStreetMap more complete and more
-detailed - or even just looking around. Unfortunately, this machine is
-already stuffed full of high performance, high capacity disks, which
-means we need to look at replacing it with something more modern and
-larger.
+detailed --- or even just looking around. Unfortunately, this machine
+is already stuffed full of high performance, high capacity disks,
+which means we need to look at replacing it with something more modern
+and larger.
 
 #### Secondary
 
@@ -63,9 +65,9 @@ We know that out-of-copyright (OOC) maps and aerial imagery are both
 very useful sources for mapping activities, and we're not happy that
 the machine which used to serve this data is currently down. The
 reason is that the large external disk arrays used to store the
-imagery consume too much power for the temporary home they are in
-while our friends at UCL re-build the building which used to be their
-home.
+imagery are very old and consume too much power for the home they are
+in while our friends at UCL re-build the building which used to be
+their home.
 
 To fix this, we can get a smaller, more modern and more power
 efficient server to serve that data, and get this service back online

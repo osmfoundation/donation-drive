@@ -4,10 +4,10 @@ title: Why You Should Contribute
 author: Matt Amos
 ---
 
-OpenStreetMap is a fantastic project which thousands of people around
-the world contribute to daily. The data OpenStreetMap distributes
-powers services used by millions and helps save lives. Despite the
-dedicated efforts of volunteers, we cannot run the project without
+OpenStreetMap is a fantastic project to which thousands of people
+around the world contribute daily. OpenStreetMap distributes data
+which power services used by millions and helps save lives. Despite
+the dedicated efforts of volunteers, we cannot run the project without
 computer hardware, which costs money. You can help the project thrive
 over the next year by contributing what you can.
 
