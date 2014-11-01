@@ -1,3 +1,4 @@
 highlighter: pygments
 safe: true
 lsi: false
+baseurl: http://zerebubuth.github.io/osm-hardware-2014
