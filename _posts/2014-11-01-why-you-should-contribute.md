@@ -34,6 +34,9 @@ If you would like to do more, then you can:
   name suggests, is hard work and requires diligence, but can make a
   huge difference to the project.
 
+* Buy a "Hardware drive 2014" t-shirt? Proudly wear your support on
+  your (short) sleeve!
+
 * [Donate money][3] to the hardware funding drive. Whatever you can
   spare will be gratefully received and put towards hardware which
   is necessary for the continued growth and success of the project.
