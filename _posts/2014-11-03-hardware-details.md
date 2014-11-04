@@ -62,7 +62,7 @@ Approximate cost: £ 1.5k
 Serving aerial imagery is also about good disk performance, same as
 serving tiles but the aerial imagery tiles tend to be quite large and
 not rendered as often. Reprojecting and slicing up aerial imagery can
-be quite CPU intensive though, so the specification for an aerial
+be CPU intensive though, so the specification for an aerial
 imagery server looks a lot like that of a tile server but with more,
 slower disk --- 128GB RAM, a couple of low-voltage E5-2650Ls and 6 4TB
 SAS3 disks.
@@ -77,7 +77,7 @@ The services machine does a lot of odd jobs; it serves GPS traces to
 the website machines, it serves the
 [planet](http://planet.openstreetmap.org), stores backups, aggregates
 log files, runs the Chef configuration server and serves internal DNS
-requests. All of this means it needs to be quite a general-purpose
+requests. All of this means it needs to be a general-purpose
 machine, with quite a lot of RAM, decent CPUs and a lot of space for
 storing all those GPS traces, dumps and planets. A suitable spec is a
 couple of decent CPUs (E5-2650LV2s) with 256GB RAM and 9 4TB SAS2
