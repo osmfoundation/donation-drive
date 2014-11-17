@@ -17,13 +17,12 @@ know that the capacity is there for future expansion.
 
 To keep as much of the data accessible as quickly as possible, we also
 want lots of RAM to use as system cache. 256GB seems to be the largest
-we can reasonably get before it starts getting _really_ expensive.
+that it's reasonable to get.
 
-Finally, we add on a couple of good quality, enterprise grade SSDs. In
-the last few years there have been several really good contenders in
-the consumer (or pro-sumer) market but, for reliability and especially
-under hard power-off conditions, you still can't beat enterprise
-grade.
+Finally, we add on a couple of good quality, enterprise grade
+SSDs. For reliability and especially under hard power-off conditions,
+you still want enterprise grade despite improvements in the pro-sumer
+market.
 
 Approximate cost: £ 21k
 
