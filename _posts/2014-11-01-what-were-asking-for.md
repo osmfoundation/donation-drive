@@ -9,7 +9,7 @@ resourceful people, giving their time to make the best map of the
 world. Those mappers' contributions are the largest part of the
 project. However, there are some small additional things such as
 having a shared repository to upload their contributions to, services
-to help them make the map and talk to eachother. We are asking for
+to help them make the map and talk to each other. We are asking for
 donations to keep these services running and improve them, so that
 everyone else can continue making an amazing map.
 
