@@ -58,6 +58,11 @@ you can:
   banners on services for 12 months? Not on the main page, of
   course...)
 
+* Donate time? Some of your employees might jump at the chance to be
+  more involved with OSM, so why not give them a "20% time" to
+  [join a Working Group][2] or contribute time to a project which
+  helps OSM?
+
 * [Donate money][3] to the hardware funding drive. Any contribution
   will help and is gratefully received.
 
