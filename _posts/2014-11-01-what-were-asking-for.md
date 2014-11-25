@@ -2,6 +2,7 @@
 layout: post
 title: What We're Asking For
 author: Matt Amos
+order: 1
 ---
 
 The OpenStreetMap project is a global community of dedicated and

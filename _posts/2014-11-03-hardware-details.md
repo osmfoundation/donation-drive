@@ -2,6 +2,7 @@
 layout: post
 title: Hardware Details
 author: Matt Amos
+order: 3
 ---
 
 Details of the hardware.

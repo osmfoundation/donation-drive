@@ -2,6 +2,7 @@
 layout: post
 title: Why You Should Contribute
 author: Matt Amos
+order: 2
 ---
 
 OpenStreetMap is a fantastic project to which thousands of people
