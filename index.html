@@ -1,15 +1,121 @@
----
-layout: page
-title: OpenStreetMap Hardware Funding Drive 2014
----
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Donate | OpenStreetMap</title>
+  <meta name='robots' content='index'/>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <meta name='twitter:site' content='@openstreetmap' />
+  <meta property='og:site_name' content='Donate to OpenStreetMap' />
+  <meta name='twitter:url' content='' />
+  <meta name='twitter:domain' content='http://donate.osm.org/' />
+  <meta property='og:url' content='' />
+  <meta name='twitter:title' content='Donate to OpenStreetMap' />
+  <meta property='og:title' content='Donate to OpenStreetMap' />
+  <meta name='twitter:description' content='OpenStreetMap is run and supported by volunteers like you. With more and more people helping to make great maps, we need bigger and faster servers to keep up with the demand. If you enjoy using or contributing to OpenStreetMap, please consider making a donation.' />
+  <meta property='og:description' content='OpenStreetMap is run and supported by volunteers like you. With more and more people helping to make great maps, we need bigger and faster servers to keep up with the demand. If you enjoy using or contributing to OpenStreetMap, please consider making a donation.' />
+  <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon' />
+  <link href='base.css' rel='stylesheet' />
+  <link href='site.css' rel='stylesheet' />
+  <script src='js/jquery.min.js'></script>
+</head>
+<body class='fill-darkgreen'>
 
-<!-- <h1>List of posts</h1> -->
-<dl class="posts">
-  {% assign sorted_posts = site.posts | sort:'order' %}
-  {% for post in sorted_posts %}
-    <dt><h2>&raquo; <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2></dt>
-    <dd>{{ post.excerpt }}</dd><br/>
-  {% endfor %}
-</dl>
+<div class='limiter clearfix'>
+  <div class='fill-dark dark col8 clearfix'>
 
+    <div class='col12 clearfix pad2x contain keyline-bottom'>
+      <div class='sprite logo'></div>
+      <div class='pin-left strong'>
+        Support OpenStreetMap
+      </div>
+    </div>
 
+    <div class='pad2 dark'>
+      <h1>OpenStreetMap Hardware <br />Funding Drive 2014</h1>
+      <h2 class='quiet'>Bigger Servers for a Growing OpenStreetMap</h2>
+    </div>
+  </div>
+
+</div>
+
+<div class='limiter clearfix'>
+  <div class='col4 fr fill-white keyline-left round-bottomright'>
+    <div class='pad2'>
+
+      <h2>Raised so far</h2>
+      <div class='progress-bar contain fill-darken0 col12'>
+        <div class='progress fill-darkgreen pin-left block col12'></div>
+      </div>
+    </div>
+
+    <div class='pad2'>
+      <h3>Support OpenStreetMap</h3>
+      <p class='quiet'>Contribute with your credit card through PayPal.</p>
+      <a href='http://wiki.openstreetmap.org/wiki/Donations'>other ways to give.</a>
+      <form id='donate'>
+        <fieldset>
+          <div class='grouped-options inline'><!--
+            --><input type='radio' name='amount' id='amount-15' checked=true /><label for='amount-15'>£15</label><!--
+            --><input type='radio' name='amount' id='amount-30' /><label for='amount-30'>£30</label><!--
+            --><input type='radio' name='amount' id='amount-50' /><label for='amount-50'>£50</label><!--
+            --><input type='radio' name='amount' id='amount-custom' /><label for='amount-custom'>Custom amount</label>
+          </div>
+
+          <div class='contain'>
+            <input type='text' id='custom-value' class='before disabled' name='custom-value' value=25 />
+            <span class='before-dollar quiet'>$</span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <label>Public comment</label>
+          <input type='text' name='comment' class='col12' placeholder='200 characters' />
+        </fieldset>
+
+        <fieldset>
+          <label>List my name next to my comment on the donor list</label>
+          <input type='checkbox' name='' value='' checked=true />
+        </fieldset>
+
+        <input type='submit' class='col12' name='' value='Donate' />
+      </form>
+
+      <small>
+        The OpenStreetMap foundation is under a non-profit status. For more information <a href='http://foundation.openstreetmap.org/'>click here</a>.
+      </small>
+    </div>
+
+  </div>
+  <div class='col8 fr'>
+    <div class='prose pad2 fill-white round-bottom'>
+      <p>
+      OpenStreetMap is an amazing community creating the best map of the world every day. We're here to make sure you have the server power needed for storing map data, rendering map tiles and sharing documentation. We've been growing fast over the last year so our team is gearing up to install a new generation of servers. We have a solid plan in place - we're asking you to help fund it.
+
+      - Andy, <a href='http://www.osmfoundation.org/wiki/Operations_Working_Group'>Operations Working Group</a>
+      </p>
+
+      <h2>Key supporters</h2>
+      <p>Company 1, 2, 3 (need more fleshing out who gets to be on this list for what money and whether this is a limited list or not).</p>
+
+      <h2>Our plan</h2>
+      <p>Talk about the hardware upgrade plan. Add a hot graph showing growth in traffic + capacity.</p>
+
+      <h2>History</h2>
+      <p>Establish credibilty here. This is what this team has scaled in the past.</p>
+
+      <h2>The Operations Working Group Team</h2>
+      <p>Create a personal connection, highlight the people who are going to make this a success.</p>
+
+      <h2>FAQ</h2>
+      <h4>How can I donate more?</h4>
+      <h4>How long will these funds last?</h4>
+      <h4>What's going to happen once you've used these funds?</h4>
+      <h4>What other support do you need?</h4>
+    </div>
+  </div>
+</div>
+
+<script src='site.js'></script>
+</body>
+</html>

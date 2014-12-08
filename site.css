@@ -1,0 +1,134 @@
+/* HTML elements
+---------------------------------------------- */
+h1,h2,h3 {
+  font-weight:bold;
+  margin:0 0 10px;
+  }
+h4,h5,h6 {
+  font-weight:bold;
+  margin:0 0 5px;
+  }
+h1 {
+  font-size:36px;
+  line-height:52px;
+  }
+h2 {
+  font-size:24px;
+  line-height:30px;
+  }
+h4 {
+  font-size:22px;
+  line-height:28px;
+  }
+h5 {
+  font-size:18px;
+  line-height:26px;
+  }
+fieldset {
+  margin:0 0 10px;
+  }
+
+.grouped-options {
+  border:1px solid #7092ff;
+  margin:0 0 10px;
+  }
+.grouped-options label {
+  cursor:pointer;
+  vertical-align:top;
+  display:inline-block;
+  padding:10px;
+  line-height:20px;
+  color:#7092ff;
+  }
+.grouped-options input[type=radio] { display:none; }
+.grouped-options label:hover {
+  color:#0a44ff;
+  }
+.grouped-options input[type=radio]:checked + label {
+  background-color:#7092ff;
+  color:#fff;
+  font-weight:bold;
+  }
+input[type=text]:focus {
+  border:1px solid #7092ff;
+  }
+
+
+/* Structure
+---------------------------------------------- */
+body { margin-top:40px; margin-bottom:40px; }
+
+/* Sprite
+---------------------------------------------- */
+.sprite {
+  background:transparent url(img/sprite@2x.png) no-repeat 0 0;
+  background-size:100px 100px;
+  }
+  .sprite.logo {
+    background-position:0 0;
+    width:100px;
+    height:100px;
+    }
+
+/* Components
+---------------------------------------------- */
+.progress-bar {
+  border-radius:50px;
+  height:30px;
+  }
+.progress {
+  border-radius:50px; 
+  width:25%;
+  height:15px;
+  top:8px;
+  left:8px;
+  right:8px;
+  }
+
+/* Colors
+---------------------------------------------- */
+.fill-white     { background-color:#fff; }
+.fill-light     { background-color:#eee; }
+.fill-dark      { background-color:#595959; }
+.fill-darkgreen { background-color:#6ecc8e; }
+.fill-green     { background-color:#a2e99f; }
+.fill-darken0   { background-color:rgba(0,0,0,0.05); }
+.fill-darken1   { background-color:rgba(0,0,0,0.10); }
+
+.color-blue { color:#7092ff; }
+
+a.button,
+input[type='submit'] {
+  background-color:#7092ff;
+  }
+a.button:hover,
+input[type='submit']:hover {
+  background-color:#0a44ff;
+  }
+
+/* Custom tweaks
+---------------------------------------------- */
+.logo + div {
+  font-size:18px;
+  line-height:0;
+  top:50px;
+  left:130px;
+  }
+.before-dollar {
+  position:absolute;
+  top:21px;
+  left:10px;
+  line-height:0;
+  display:block;
+  }
+input:focus + .before-dollar {
+  color:#7092ff;
+  }
+input.before {
+  padding-left:22px;
+  }
+
+/* Mobile
+---------------------------------------------- */
+@media only screen and (max-width: 640px) {
+}
