@@ -16,17 +16,38 @@ h2 {
   font-size:24px;
   line-height:30px;
   }
-h4 {
+h3 {
   font-size:22px;
   line-height:28px;
+  }
+h4 {
+  font-size:20px;
+  line-height:24px;
   }
 h5 {
   font-size:18px;
   line-height:26px;
   }
+small {
+  font-size:14px;
+  line-height:18px;
+  }
 fieldset {
   margin:0 0 10px;
   }
+a       { color:#7092ff; }
+a:hover { color:#0a44ff; }
+
+.prose blockquote {
+  background-color:transparent;
+  border-left:10px solid #eee;
+  padding:0 20px;
+  }
+  blockquote cite {
+    text-align:right;
+    display:block;
+    margin:10px 0;
+    }
 
 .grouped-options {
   border:1px solid #7092ff;
@@ -39,6 +60,10 @@ fieldset {
   padding:10px;
   line-height:20px;
   color:#7092ff;
+  border-right:1px solid #7092ff;
+  }
+.grouped-options input#amount-custom + label {
+  border:none;
   }
 .grouped-options input[type=radio] { display:none; }
 .grouped-options label:hover {
@@ -114,18 +139,21 @@ input[type='submit']:hover {
   top:50px;
   left:130px;
   }
-.before-dollar {
+.before-custom-amount {
   position:absolute;
   top:21px;
   left:10px;
   line-height:0;
   display:block;
   }
-input:focus + .before-dollar {
+input#custom-value:focus,
+input:focus + .before-custom-amount {
   color:#7092ff;
   }
+  input#custom-value:focus { font-weight:bold; }
+
 input.before {
-  padding-left:22px;
+  padding-left:20px;
   }
 
 /* Mobile

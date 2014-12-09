@@ -1,7 +1,10 @@
-
+$('input[type="radio"]').on('change', function() {
+  console.log('hit');
+  $('#custom-value').attr('disabled', true);
+});
 
 $('#amount-custom').on('change', function() {
-  $('#custom-value').focus();
+  $('#custom-value').attr('disabled', false).focus();
 });
 
 $('#donate').submit(function() {

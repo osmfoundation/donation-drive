@@ -101,8 +101,6 @@ small,
   line-height:20px;
   }
 
-small { display:block; }
-
 .strong,
 strong {
   font-weight:700;

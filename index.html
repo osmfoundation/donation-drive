@@ -40,60 +40,49 @@
 </div>
 
 <div class='limiter clearfix'>
-  <div class='col4 fr fill-white keyline-left round-bottomright'>
-    <div class='pad2'>
+  <div class='col4 fr fill-white pad2 keyline-left round-bottomright'>
 
-      <h2>Raised so far</h2>
+    <div class='space-bottom1'>
+      <h3><span id='js-raised'>£25,000</span> <small>of £100,000 goal</small></h3>
       <div class='progress-bar contain fill-darken0 col12'>
         <div class='progress fill-darkgreen pin-left block col12'></div>
       </div>
+      <div class='strong center pad1y'>
+        <span id='js-backers'>250</span> <small>total supporters</small>
+      </div>
     </div>
 
-    <div class='pad2'>
-      <h3>Support OpenStreetMap</h3>
-      <p class='quiet'>Contribute with your credit card through PayPal.</p>
-      <a href='http://wiki.openstreetmap.org/wiki/Donations'>other ways to give.</a>
-      <form id='donate'>
-        <fieldset>
-          <div class='grouped-options inline'><!--
-            --><input type='radio' name='amount' id='amount-15' checked=true /><label for='amount-15'>£15</label><!--
-            --><input type='radio' name='amount' id='amount-30' /><label for='amount-30'>£30</label><!--
-            --><input type='radio' name='amount' id='amount-50' /><label for='amount-50'>£50</label><!--
-            --><input type='radio' name='amount' id='amount-custom' /><label for='amount-custom'>Custom amount</label>
-          </div>
+    <p class='quiet'>Contribute using your credit card, PayPal, or <a href='http://wiki.openstreetmap.org/wiki/Donations'>other ways to give.</a></p>
+    <form id='donate'>
+      <fieldset>
+        <div class='grouped-options inline'><!--
+          --><input type='radio' name='amount' id='amount-15' checked=true /><label for='amount-15'>£15</label><!--
+          --><input type='radio' name='amount' id='amount-30' /><label for='amount-30'>£30</label><!--
+          --><input type='radio' name='amount' id='amount-50' /><label for='amount-50'>£50</label><!--
+          --><input type='radio' name='amount' id='amount-custom' /><label for='amount-custom'>Custom amount</label>
+        </div>
 
-          <div class='contain'>
-            <input type='text' id='custom-value' class='before disabled' name='custom-value' value=25 />
-            <span class='before-dollar quiet'>$</span>
-          </div>
-        </fieldset>
+        <div class='contain'>
+          <input type='text' id='custom-value' class='before disabled col12' name='custom-value' value=25 disabled=true />
+          <span class='before-custom-amount quiet'>£</span>
+        </div>
+      </fieldset>
 
-        <fieldset>
-          <label>Public comment</label>
-          <input type='text' name='comment' class='col12' placeholder='200 characters' />
-        </fieldset>
+      <input type='submit' class='col12 space-bottom2' name='' value='Donate' />
+    </form>
 
-        <fieldset>
-          <label>List my name next to my comment on the donor list</label>
-          <input type='checkbox' name='' value='' checked=true />
-        </fieldset>
-
-        <input type='submit' class='col12' name='' value='Donate' />
-      </form>
-
-      <small>
-        The OpenStreetMap foundation is under a non-profit status. For more information <a href='http://foundation.openstreetmap.org/'>click here</a>.
-      </small>
-    </div>
+    <small>
+      The OpenStreetMap foundation is under a non-profit status. For more information <a href='http://foundation.openstreetmap.org/'>click here</a>.
+    </small>
 
   </div>
   <div class='col8 fr'>
     <div class='prose pad2 fill-white round-bottom'>
-      <p>
+      <blockquote>
       OpenStreetMap is an amazing community creating the best map of the world every day. We're here to make sure you have the server power needed for storing map data, rendering map tiles and sharing documentation. We've been growing fast over the last year so our team is gearing up to install a new generation of servers. We have a solid plan in place - we're asking you to help fund it.
 
-      - Andy, <a href='http://www.osmfoundation.org/wiki/Operations_Working_Group'>Operations Working Group</a>
-      </p>
+      <cite>- Andy, <a href='http://www.osmfoundation.org/wiki/Operations_Working_Group'>Operations Working Group</a></cite>
+      </blockquote>
 
       <h2>Key supporters</h2>
       <p>Company 1, 2, 3 (need more fleshing out who gets to be on this list for what money and whether this is a limited list or not).</p>
