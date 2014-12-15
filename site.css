@@ -107,14 +107,11 @@ body { margin-top:40px; margin-bottom:40px; }
     height:100px;
     }
 
-.bg {
-  background-repeat:no-repeat;
-  background-size:contain;
+.bg-hardware {
+  background-image:url(img/bg.png);
+  background-repeat:repeat;
+  background-size:200px 200px;
   }
-  .bg.bg-hardware {
-    background-image:url(img/bg.png);
-    background-repeat:repeat;
-    }
 
 /* Components
 ---------------------------------------------- */
@@ -176,6 +173,17 @@ input:focus + .before-custom-amount {
 input.before {
   padding-left:20px;
   }
+
+.avatar {
+  display:inline-block;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background-size:contain;
+  vertical-align:middle;
+  margin-right:5px;
+  }
+  .avatar.andy { background-image:url(img/andy.png); }
 
 /* Mobile
 ---------------------------------------------- */
