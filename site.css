@@ -107,6 +107,15 @@ body { margin-top:40px; margin-bottom:40px; }
     height:100px;
     }
 
+.bg {
+  background-repeat:no-repeat;
+  background-size:contain;
+  }
+  .bg.bg-hardware {
+    background-image:url(img/bg.png);
+    background-repeat:repeat;
+    }
+
 /* Components
 ---------------------------------------------- */
 .progress-bar {
