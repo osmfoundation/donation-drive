@@ -17,7 +17,7 @@
   <link rel='shortcut icon' href='img/favicon.png' type='image/x-icon' />
   <link href='base.css' rel='stylesheet' />
   <link href='site.css' rel='stylesheet' />
-  <script src='js/jquery.min.js'></script>
+  <script src='js/d3.min.js'></script>
 </head>
 <body class='fill-darkgreen bg-hardware'>
 
@@ -43,7 +43,7 @@
   <div class='col4 fr fill-white pad2 keyline-left round-right'>
 
     <div class='space-bottom1'>
-      <h2>Raised so far</h2>
+      <h2>Donations raised</h2>
       <h2><span id='js-raised'></span> <small>of £100,000 goal</small></h2>
       <div class='progress-bar contain fill-darken0 col12'>
         <div id='js-progress' class='progress fill-darkgreen pin-left block col12'></div>
@@ -60,14 +60,10 @@
           <div class='grouped-options'><!--
             --><input type='radio' name='amount' id='amount-15' checked=true /><label for='amount-15'>£15</label><!--
             --><input type='radio' name='amount' id='amount-30' /><label for='amount-30'>£30</label><!--
-            --><input type='radio' name='amount' id='amount-50' /><label for='amount-50'>£50</label><!--
-            --><input type='radio' name='amount' id='amount-custom' /><label for='amount-custom'>Custom</label>
+            --><input type='radio' name='amount' id='amount-100' /><label for='amount-100'>£100</label><!--
+            --><input type='radio' name='amount' id='amount-500' /><label for='amount-500'>£500</label><!--
+            --><input type='radio' name='amount' id='amount-1000' /><label for='amount-1000'>£1000</label>
           </div>
-        </div>
-
-        <div class='contain'>
-          <input type='text' id='custom-value' class='before disabled col12' name='custom-value' value=25 disabled=true />
-          <span class='before-custom-amount quiet'>£</span>
         </div>
       </fieldset>
 
@@ -75,38 +71,137 @@
     </form>
 
     <small>
+      Want to donate more? <a href='mailto:operations@osmfoundation.org'>email us</a>.
       The OpenStreetMap foundation is under a non-profit status. For more information <a href='http://foundation.openstreetmap.org/'>click here</a>.
     </small>
 
   </div>
   <div class='col8 fr'>
-    <div class='prose pad2 fill-white round-bottom'>
-      <blockquote>
-      OpenStreetMap is an amazing community creating the best map of the world every day. We're here to make sure you have the server power needed for storing map data, rendering map tiles and sharing documentation. We've been growing fast over the last year so our team is gearing up to install a new generation of servers. We have a solid plan in place - we're asking you to help fund it.
+    <div class='pad2 fill-white round-bottom'>
 
-      </blockquote>
-      <div class='text-right'>
-        <span class='avatar andy'></span>
-        Andy, <a href='http://www.osmfoundation.org/wiki/Operations_Working_Group'>Operations Working Group</a>
+      <div class='tabs col12 keyline-bottom space-bottom2'>
+           <a href='#active1' class='inline pad1y pad2x active'>About</a><!--
+        --><a href='#active2' class='inline pad1y pad2x'>The upgrade</a><!--
+        --><a href='#active3' class='inline pad1y pad2x'>FAQ</a>
       </div>
 
-      <h2>Key supporters</h2>
-      <p>Company 1, 2, 3 (need more fleshing out who gets to be on this list for what money and whether this is a limited list or not).</p>
 
-      <h2>Our plan</h2>
-      <p>Talk about the hardware upgrade plan. Add a hot graph showing growth in traffic + capacity.</p>
+      <div class='prose sliding h active1'>
 
-      <h2>History</h2>
-      <p>Establish credibilty here. This is what this team has scaled in the past.</p>
+        <!-- Tab one -->
+        <div>
+          <blockquote>
+          OpenStreetMap is an amazing community creating the best map of the world every day. We're here to make sure you have the server power needed for storing map data, rendering map tiles and sharing documentation. We've been growing fast over the last year so our team is gearing up to install a new generation of servers. We have a solid plan in place - we're asking you to help fund it.
+          </blockquote>
+          <div class='text-right'>
+            <span class='avatar andy'></span>
+            Andy, <a href='http://www.osmfoundation.org/wiki/Operations_Working_Group'>Operations Working Group</a>
+          </div>
 
-      <h2>The Operations Working Group Team</h2>
-      <p>Create a personal connection, highlight the people who are going to make this a success.</p>
+          <h3>Strategic donors</h3>
+          <ul>
+            <li>Company <strong>£30,000</strong></li>
+            <li>Organization <strong>£25,000</strong></li>
+            <li>Another company <strong>£10,000</strong></li>
+          </ul>
 
-      <h2>FAQ</h2>
-      <h4>How can I donate more?</h4>
-      <h4>How long will these funds last?</h4>
-      <h4>What's going to happen once you've used these funds?</h4>
-      <h4>What other support do you need?</h4>
+          <h3>Online donors</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody id='donor-list'></tbody>
+          </table>
+        </div>
+
+        <!-- Tab two -->
+        <div>
+          <h2>The upgrade</h2>
+          <h3>Where we are</h3>
+          <p>This graph is obviously highly simplified as there are many moving pieces in OpenStreetMap. In a similar vein, we are not steering towards a precipice of data loss but rather towards a point where performance degradation from high traffic on the project will become perceptible and unpleasant. Some of the results would be tiles loading slower, updating slower, edits accepted slower on the APIs and more scheduled maintenance downtime. Meeting this scale point was entirely anticipated. Our last funding drive was exactly designed to bring us to this point based on growth projections.</p>
+
+          <h3>Our plan</h3>
+          <p>We have developed a plan to upgrade current systems with the goal to scale OpenStreetMap into late 2016.</p>
+          <ul>
+            <li>Replace database server (32G / 8 cores) to a ... (64G / 16 cores)</li>
+            <li>Replace ... / ...</li>
+            <li>Upgrade load balancers</li>
+            <li>Upgrade database software to Postgresql 9.3</li>
+            <li>Deep review of current database configuration</li>
+          </ul>
+          <p>The goal is to finalize the above improvements by June 2015.</p>
+
+          <h3>The budget</h3>
+          <p>We have budgeted for the above:</p>
+          <ul>
+            <li>Hardware</li>
+            <li>External consultant work</li>
+          </ul>
+          <p>
+            <em>Exact budget positions subject to change.</em>
+          </p>
+
+          <h3>History</h3>
+          <p>The Operations Working Group has scaled OpenStreetMap since 20XX. We're here to maintain servers day-to-day from applying security patches to fine tuning the stack. From time to time we apply larger upgrades, here are some of the more notable ones.</p>
+
+          <h4>2012 Upgrade</h4>
+          <ul>
+            <li>Updated</li>
+            <li>Migrated</li>
+            <li>As a result, we sped up Wiki editing which was a head ache before and made the tile server really snappy. This upgrade was projected to allow OpenStreetMap to scale into the summer of 2015.</li>
+          </ul>
+          <p>
+            <em>2012 budget: xxx</em>
+          </p>
+
+          <h4>2010 Upgrade</h4>
+          <ul>
+            <li>Updated</li>
+            <li>Migrated</li>
+            <li>As a result, we sped up Wiki editing which was a head ache before and made the tile server really snappy. This upgrade was projected to allow OpenStreetMap to scale into the summer of 2015.</li>
+          </ul>
+          <p>
+            <em>2010 budget: xxx</em>
+          </p>
+        </div>
+
+        <!-- Tab three -->
+        <div>
+          <h2>FAQ</h2>
+          <h3>Who's doing the upgrade?</h3>
+          <p>The OpenStreetMap Foundation's Operations Working Group. Read more about the <a href='https://gist.github.com/lxbarth/c2b13cfe8362a79bd654'>Operations Working Group over here</a>.</p>
+
+          <h4>What's the OpenStreetMap Foundation?</h4>
+          <p>The OpenStreetMap Foundation is the non-profit supporting the OpenStreetMap project by maintaining its servers, providing a legal structure around the project's database, by organizing an annual conference and more. <a href='http://osmfoundation.org/wiki/Main_Page'>Learn more about the OpenStreetMap Foundation on osmfoundation.org</a>.</p>
+
+          <h4>Why now?</h4>
+          <p>We plan our hardware funding drives based on 6 to 12 month projections of scaling the current platform. We've determined that at current growth, we'd see first significant downgrades in performance by mid-2015 and now's the time for building ahead.</p>
+
+          <h4>Who is receiving funds?</h4>
+          <p>The funding drive is an iniative by the OpenStreetMap Foundation's <a href='http://www.osmfoundation.org/wiki/Operations_Working_Group'>Operations Working Group (OWG)</a> - all funds are collected by the <a href='http://osmfoundation.org/'>OpenStreetMap Foundation</a> and made available to the Operations Working Group.</p>
+
+          <h4>Are you a 501(c)(3)?</h4>
+          <p>No. The OpenStreetMap Foundation is a <a href='https://blog.openstreetmap.org/about/'>UK-registered not-for-profit organization that supports the OpenStreetMap Project</a>. It is not a <a href='http://en.wikipedia.org/wiki/501%28c%29_organization#501.28c.29.283.29'>501(c)(3)</a> in the sense of the Internal Revenue Code of the US Internal Revenue Service (IRS).</p>
+
+          <h4>How long will these funds last?</h4>
+          <p>We have designed this funding drive to allow for investments that will let us scale OpenStreetMap's infrastructure into late 2016.</p>
+
+          <h4>Why only scale into late 2016?</h4>
+          <p>Everything else would be overbuilding. We also don't usually scale the same components. While we're for instance upgrading the load balancer this time, we'll probably not touch it the next time around.</p>
+
+          <h4>What's going to happen once you've used these funds?</h4>
+          <p>There will be another funding drive for hardware :) Seriously, the model of focused funding drives is working very well. It allows for a very clear value for money and it's what made it possible to scale OpenStreetMap from a small server in whose? basement to supporting billions of edited objects each month.</p>
+
+          <h4>What else can we do to support the Operation Working Group?</h4>
+          <p>Join us! Aside from funds to upgrade our hardware what we need most are people. If you're a skilled devops person, a database specialist, a passionate programmer looking to go deeper in the stack or if you're eager to learn more about scaling a huge data project - get in touch and join us in our work.</p>
+
+          <h4>How can I donate more?</h4>
+          <a href='mailto:operations@osmfoundation.org'>Get in touch</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

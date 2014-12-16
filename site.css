@@ -50,7 +50,7 @@ a:hover { color:#0a44ff; }
     }
 
 .options {
-  border:2px solid #7092ff;
+  border:1px solid #7092ff;
   border-radius:3px;
   display:table;
   table-layout:fixed;
@@ -70,11 +70,11 @@ a:hover { color:#0a44ff; }
   line-height:38px;
   height:40px;
   color:#7092ff;
-  border-right:2px solid #7092ff;
+  border-right:1px solid #7092ff;
   font-weight:bold;
   text-align:center;
   }
-.grouped-options input#amount-custom + label {
+.grouped-options input#amount-1000 + label {
   border:none;
   }
 .grouped-options input[type=radio] { display:none; }
@@ -126,6 +126,32 @@ body { margin-top:40px; margin-bottom:40px; }
   top:8px;
   left:8px;
   right:8px;
+  }
+
+.sliding {
+  min-height:480px;
+  }
+.tabs {
+  border-color:#ccc;
+  }
+.tabs a {
+  color:#808080;
+  border-radius:4px 4px 0 0;
+  position:relative;
+  top:1px;
+  }
+.tabs a:focus {
+  -webkit-box-shadow:none;
+          box-shadow:none;
+  }
+.tabs a:hover,
+.tabs .active {
+  color:#404040;
+  }
+.tabs .active {
+  background-color:#fff;
+  border:1px solid #ccc;
+  border-bottom-color:#fff;
   }
 
 /* Colors

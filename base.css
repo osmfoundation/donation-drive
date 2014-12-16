@@ -277,70 +277,6 @@ button:disabled:focus,
   color:rgba(255,255,255,0.5);
   }
 
-/* Tab style for links that toggle between views */
-.tabs {
-  display:inline-block;
-  }
-  .tabs,
-  .pill.tabs {
-    -webkit-border-radius:3px;
-            border-radius:3px;
-    }
-  .tabs > a {
-    border-top:1px solid rgba(0,0,0,0.25);
-    border-bottom:1px solid rgba(0,0,0,0.25);
-    background:transparent;
-    color:rgba(0,0,0,.5);
-    font-weight:700;
-    font-size:12px;
-    text-align:center;
-    display:inline-block;
-    height:40px;
-    margin:0;
-    padding:10px;
-    white-space:nowrap;
-    text-overflow:ellipsis;
-    }
-    .tabs > * {
-      border:0 solid rgba(0,0,0,0.25);
-      border-right-width:1px;
-      }
-    .tabs > *:first-child {
-      border-left-width:1px;
-      border-radius: 3px 0 0 3px;
-      }
-    .tabs > *:last-child {
-      border-radius: 0 3px 3px 0;
-      }
-    .tabs > *:hover {
-      background:rgba(0,0,0,0.05);
-      color:rgba(0,0,0,.5);
-      }
-    .tabs > *.active,
-    .tabs.checkbox input[type=checkbox]:checked + label {
-      background:#eee;
-      background:rgba(0,0,0,0.1);
-      }
-
-.dark.tabs,
-.dark.tabs > *,
-.dark .tabs,
-.dark .tabs > * {
-  border-color:rgba(255,255,255,0.25);
-  color:rgba(255,255,255,1);
-  }
-  .dark.tabs > *:hover,
-  .dark .tabs > *:hover {
-    background-color:rgba(225,255,255,0.05);
-    color:rgba(255,255,255,1);
-    }
-  .dark.tabs > *.active,
-  .dark .tabs > *.active,
-  .dark.tabs.checkbox input[type=checkbox]:checked + label {
-    background-color:rgba(255,255,255,0.10);
-    }
-
-/* Pill wrapper for joining buttons. */
 /* Use <!-- --> to eliminate whitespace between buttons. */
 .pill{
   display:inline-block;
@@ -858,6 +794,35 @@ h6.small {
   .pin-bottomleft  { bottom:0; left:0; }
   .pin-topright    { top:0; right:0; }
   .pin-topleft     { top:0; left:0; }
+
+
+/* Components: Sliding panes
+------------------------------------------------------- */
+.sliding.h > * {
+  display:none;
+  }
+.sliding.h.active1 > *:nth-child(   1),
+.sliding.h.active2 > *:nth-child(   2),
+.sliding.h.active3 > *:nth-child(   3),
+.sliding.h.active4 > *:nth-child(   4),
+.sliding.h.active5 > *:nth-child(   5),
+.sliding.h.active6 > *:nth-child(   6),
+.sliding.h.active7 > *:nth-child(   7),
+.sliding.h.active8 > *:nth-child(   8),
+.sliding.h.active9 > *:nth-child(   9) {
+  display:block;
+  }
+.sliding.h.active1 > *:nth-child( n+2),
+.sliding.h.active2 > *:nth-child( n+3),
+.sliding.h.active3 > *:nth-child( n+4),
+.sliding.h.active4 > *:nth-child( n+5),
+.sliding.h.active5 > *:nth-child( n+6),
+.sliding.h.active6 > *:nth-child( n+7),
+.sliding.h.active7 > *:nth-child( n+8),
+.sliding.h.active8 > *:nth-child( n+9),
+.sliding.h.active9 > *:nth-child(n+10) {
+  display:none;
+  }
 
 /* Components: Navigations
 ------------------------------------------------------- */

@@ -7,16 +7,11 @@ function commaNum(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
-function validNumber(x) {
-  return x;
-}
-
 // Helper function: Turn form values into an object.
-
-function formKeyVal(form) {
+function formValues(form) {
     var record = {};
     ['input', 'textarea'].forEach(function(type) {
-        $(form).find(type).each(function() {
+        d3.select(form).selectAll(type).each(function() {
             if (this.value.length < 1 ||
                 this.name === '') return;
             if (this.type === 'checkbox') {
@@ -32,31 +27,49 @@ function formKeyVal(form) {
     return record;
 }
 
-$('input[type="radio"]').on('change', function() {
-  $('#custom-value').attr('disabled', true);
-});
-
-$('#amount-custom').on('change', function() {
-  $('#custom-value').attr('disabled', false).focus();
-});
-
-$('#js-raised').text('£' + commaNum(raised));
-$('#js-progress').css('width', (raised / goal) * 100 + '%');
-$('#js-backers').text(backers);
+d3.select('#js-raised').text('£' + commaNum(raised));
+d3.select('#js-progress').style('width', (raised / goal) * 100 + '%');
+d3.select('#js-backers').text(backers);
 
 // Form submission
-$('#donate').submit(function(e) {
-  var array = formKeyVal(this), amount;
+d3.select('#donate').on('submit', function(e) {
+  var array = formValues(this), amount;
   if (array.amount === 'amount-custom') {
     amount = array['custom-value'];
   } else {
     amount = array.amount.split('-')[1];  
   }
 
-  if (!validNumber) return alert('Value must be a valid number');
-
   // Amount to be submitted to
   // payment vendor.
   console.log(amount);
   return false;
 });
+
+// Tab selection
+d3.selectAll('.tabs a').on('click', function(e) {
+  var slidecontainer = d3.select('.sliding');
+  var tab = d3.select(this).attr('href').split('#')[1];
+  d3.selectAll('.tabs a').classed('active', false);
+  d3.select(this).classed('active', true);
+  var current = slidecontainer.attr('class').match(/active[0-9]+/);
+  if (current) slidecontainer.classed(current[0], false);
+  slidecontainer.classed(tab, true);
+  return false;
+});
+
+d3.csv('donors.csv')
+  .get(function(err, rows) {
+    var el = d3.select('#donor-list')
+      .selectAll('tr')
+      .data(rows)
+      .enter()
+      .append('tr')
+      .each(function(d) {
+        var selection = d3.select(this);
+        selection.append('td')
+          .text(d.name);
+        selection.append('td')
+          .text('£' + d.amount);
+      });
+  });
