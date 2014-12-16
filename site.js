@@ -33,6 +33,8 @@ d3.select('#js-backers').text(backers);
 
 // Form submission
 d3.select('#donate').on('submit', function(e) {
+  d3.event.preventDefault();
+  d3.event.stopPropagation();
   var array = formValues(this), amount;
   if (array.amount === 'amount-custom') {
     amount = array['custom-value'];
@@ -43,7 +45,6 @@ d3.select('#donate').on('submit', function(e) {
   // Amount to be submitted to
   // payment vendor.
   console.log(amount);
-  return false;
 });
 
 // Tab selection
