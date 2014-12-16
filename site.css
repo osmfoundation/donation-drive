@@ -42,12 +42,9 @@ a:hover { color:#0a44ff; }
   background-color:transparent;
   border-left:10px solid #eee;
   padding:0 20px;
+  font-size:18px;
+  line-height:28px;
   }
-  blockquote cite {
-    text-align:right;
-    display:block;
-    margin:10px 0;
-    }
 
 .options {
   border:1px solid #7092ff;

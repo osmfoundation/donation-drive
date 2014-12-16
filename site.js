@@ -48,6 +48,8 @@ d3.select('#donate').on('submit', function(e) {
 
 // Tab selection
 d3.selectAll('.tabs a').on('click', function(e) {
+  d3.event.preventDefault();
+  d3.event.stopPropagation();
   var slidecontainer = d3.select('.sliding');
   var tab = d3.select(this).attr('href').split('#')[1];
   d3.selectAll('.tabs a').classed('active', false);
@@ -55,7 +57,6 @@ d3.selectAll('.tabs a').on('click', function(e) {
   var current = slidecontainer.attr('class').match(/active[0-9]+/);
   if (current) slidecontainer.classed(current[0], false);
   slidecontainer.classed(tab, true);
-  return false;
 });
 
 d3.csv('donors.csv')
