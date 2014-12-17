@@ -100,15 +100,28 @@ d3.select('#donate').on('submit', function(e) {
   }
 });
 
-// Tab selection
-d3.selectAll('.tabs a').on('click', function(e) {
-  d3.event.preventDefault();
-  d3.event.stopPropagation();
+function activeTab() {
+  var tab = window.location.hash.split('#')[1];
   var slidecontainer = d3.select('.sliding');
-  var tab = d3.select(this).attr('href').split('#')[1];
-  d3.selectAll('.tabs a').classed('active', false);
-  d3.select(this).classed('active', true);
   var current = slidecontainer.attr('class').match(/active[0-9]+/);
   if (current) slidecontainer.classed(current[0], false);
-  slidecontainer.classed(tab, true);
-});
+
+  switch (tab) {
+    case 'the-upgrade':
+      slidecontainer.classed('active2', true);
+    break;
+    case 'faq':
+      slidecontainer.classed('active3', true);
+    break;
+    default:
+      slidecontainer.classed('active1', true);
+    break;
+  }
+
+  d3.selectAll('.tabs a').classed('active', function() {
+    return this.href.split('#')[1] === tab;
+  });
+}
+
+window.onhashchange = activeTab;
+activeTab();
