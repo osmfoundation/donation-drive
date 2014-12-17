@@ -73,5 +73,9 @@ d3.csv('donors.csv')
           .text(d.name);
         selection.append('td')
           .text('£' + d.amount);
+        selection.append('td')
+          .text(function() {
+            return d.message ? d.message : '';
+          });
       });
   });

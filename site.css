@@ -99,12 +99,17 @@ body { margin-top:40px; margin-bottom:40px; }
 ---------------------------------------------- */
 .sprite {
   background:transparent url(img/sprite@2x.png) no-repeat 0 0;
-  background-size:100px 100px;
+  background-size:160px 100px;
   }
   .sprite.logo {
     background-position:0 0;
     width:100px;
     height:100px;
+    }
+  .sprite.crown {
+    background-position:-100px 0;
+    width:60px;
+    height:60px;
     }
 
 .bg-hardware {

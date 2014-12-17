@@ -1,4 +1,4 @@
-name,amount
-Richard Fairhurst,100
-Chris Rock,50
-Stephen Fry,50
+name,amount,message
+Richard Fairhurst,100,
+Chris Rock,50,Custom message
+Stephen Fry,50,Another custom message
