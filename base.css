@@ -1007,9 +1007,6 @@ img.inline, .inline           { display:inline-block; }
     border-bottom-width:0;
     border-radius:0 0 3px 3px;
     }
-  .tabs:not(.mobile-cols) > a             { border-right-width:0; border-bottom-width:1px; }
-  .tabs:not(.mobile-cols) > a:last-child  { border-bottom:none; }
-
   .mobile-cols > .col0    { float:left; width:04.1666%; }
   .mobile-cols > .col1    { float:left; width:08.3333%; }
   .mobile-cols > .col2    { float:left; width:16.6666%; }

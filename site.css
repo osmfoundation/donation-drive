@@ -245,4 +245,23 @@ input.before {
 /* Mobile
 ---------------------------------------------- */
 @media only screen and (max-width: 640px) {
+  .sidebar {
+    padding:20px;
+    }
+  .keyline-left {
+    border-left-width:0;
+    border-bottom-width:1px;
+    }
+  .big-donors > div:not(:first-child),
+  .grouped-options label {
+    border-top-width:1px;
+    border-top-style:solid;
+    border-bottom:none;
+    }
+  .big-donors > div {
+    border-color:rgba(0,0,0,0.10);
+    }
+  .grouped-options label[for='amount-15'] {
+    border:none;
+    }
 }
