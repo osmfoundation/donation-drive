@@ -35,6 +35,12 @@ small {
 fieldset {
   margin:0 0 10px;
   }
+textarea {
+  border-color:#ccc;
+  }
+textarea:focus {
+  border-color:#7092ff;
+  }
 em {
   font-style:italic;
   }
@@ -43,8 +49,7 @@ a:hover { color:#0a44ff; }
 
 .prose blockquote {
   background-color:transparent;
-  border-left:5px solid #ccc;
-  padding:0 20px;
+  padding:0;
   font-size:18px;
   line-height:28px;
   }
@@ -114,7 +119,7 @@ body { margin-top:40px; margin-bottom:40px; }
   height:30px;
   }
 .progress {
-  border-radius:50px; 
+  border-radius:50px;
   width:0;
   height:15px;
   top:8px;
@@ -169,7 +174,7 @@ body { margin-top:40px; margin-bottom:40px; }
   display:block;
   border-left:5px solid transparent;
 	border-right:5px solid transparent;
-	border-top:5px solid #404040; 
+	border-top:5px solid #404040;
   display:none;
   position:absolute;
   bottom:35px;
