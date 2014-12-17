@@ -49,33 +49,22 @@ a:hover { color:#0a44ff; }
   line-height:28px;
   }
 
-.options {
+.grouped-options {
   border:1px solid #7092ff;
   border-radius:3px;
-  display:table;
-  table-layout:fixed;
   width:100%;
   margin:0 0 10px;
-  }
-.grouped-options {
-  display:table-row;
-  margin:0;
-  padding:0;
+  line-height:20px;
   }
 .grouped-options label {
-  display:table-cell;
   cursor:pointer;
   vertical-align:top;
-  padding:0 10px;
-  line-height:38px;
+  padding:10px;
   height:40px;
   color:#7092ff;
-  border-right:1px solid #7092ff;
+  border-color:#7092ff;
   font-weight:bold;
   text-align:center;
-  }
-.grouped-options input#amount-1000 + label {
-  border:none;
   }
 .grouped-options input[type=radio] { display:none; }
 .grouped-options label:hover {
