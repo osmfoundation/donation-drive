@@ -1,42 +1,5 @@
 var goal = 100000; // Target value to be raised.
 
-d3.csv('donors.csv')
-  .get(function(err, rows) {
-    var el = d3.select('#donor-list')
-      .selectAll('tr')
-      .data(rows)
-      .enter()
-      .append('tr')
-      .each(function(d) {
-        var selection = d3.select(this);
-        if (d.premium) {
-          selection.append('td')
-            .classed('strong', true)
-            .html(function() {
-              return '<span class="sprite crown"></span>' + d.name;
-            });
-        } else {
-          selection.append('td')
-            .text(d.name);
-        }
-        selection.append('td')
-          .text('£' + d.amount);
-        selection.append('td')
-          .text(function() {
-            return d.message ? d.message : '';
-          });
-      });
-
-      var raised = rows.reduce(function(memo, row) {
-        memo = memo + parseInt(row.amount, 10);
-        return memo;
-      }, 0); // Value raised so far.
-
-      d3.select('#js-raised').text('£' + commaNum(raised));
-      d3.select('#js-progress').style('width', (raised / goal) * 100 + '%');
-      d3.select('#js-backers').text(rows.length);
-  });
-
 // Helper function: Add commas to longer integers.
 function commaNum(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -69,6 +32,67 @@ function changeCount() {
   c.text(count - v);
 }
 
+function activeTab() {
+  var tab = window.location.hash.split('#')[1];
+  var slidecontainer = d3.select('.sliding');
+  var current = slidecontainer.attr('class').match(/active[0-9]+/);
+  if (current) slidecontainer.classed(current[0], false);
+
+  switch (tab) {
+    case 'the-upgrade':
+      slidecontainer.classed('active2', true);
+    break;
+    case 'faq':
+      slidecontainer.classed('active3', true);
+    break;
+    default:
+      slidecontainer.classed('active1', true);
+    break;
+  }
+
+  d3.selectAll('.tabs a').classed('active', function() {
+    var path = this.href.split('#')[1];
+    return (tab) ? path === tab : path === 'about';
+  });
+}
+
+d3.csv('donors.csv')
+  .get(function(err, rows) {
+    var el = d3.select('#donor-list')
+      .selectAll('tr')
+      .data(rows)
+      .enter()
+      .append('tr')
+      .each(function(d) {
+        var selection = d3.select(this);
+        if (d.premium) {
+          selection.append('td')
+            .classed('strong', true)
+            .html(function() {
+              return '<span class="sprite crown"></span>' + d.name;
+            });
+        } else {
+          selection.append('td')
+            .text(d.name);
+        }
+        selection.append('td')
+          .text('£' + commaNum(d.amount));
+        selection.append('td')
+          .text(function() {
+            return d.message ? d.message : '';
+          });
+      });
+
+      var raised = rows.reduce(function(memo, row) {
+        memo = memo + parseInt(row.amount, 10);
+        return memo;
+      }, 0); // Value raised so far.
+
+      d3.select('#js-raised').text('£' + commaNum(raised));
+      d3.select('#js-progress').style('width', (raised / goal) * 100 + '%');
+      d3.select('#js-backers').text(rows.length);
+  });
+
 d3.select('textarea')
   .on('keydown', changeCount)
   .on('cut', changeCount)
@@ -99,30 +123,6 @@ d3.select('#donate').on('submit', function(e) {
     console.log(vals);
   }
 });
-
-function activeTab() {
-  var tab = window.location.hash.split('#')[1];
-  var slidecontainer = d3.select('.sliding');
-  var current = slidecontainer.attr('class').match(/active[0-9]+/);
-  if (current) slidecontainer.classed(current[0], false);
-
-  switch (tab) {
-    case 'the-upgrade':
-      slidecontainer.classed('active2', true);
-    break;
-    case 'faq':
-      slidecontainer.classed('active3', true);
-    break;
-    default:
-      slidecontainer.classed('active1', true);
-    break;
-  }
-
-  d3.selectAll('.tabs a').classed('active', function() {
-    var path = this.href.split('#')[1];
-    return (tab) ? path === tab : path === 'about';
-  });
-}
 
 window.onhashchange = activeTab;
 activeTab();
