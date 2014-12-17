@@ -119,7 +119,8 @@ function activeTab() {
   }
 
   d3.selectAll('.tabs a').classed('active', function() {
-    return this.href.split('#')[1] === tab;
+    var path = this.href.split('#')[1];
+    return (tab) ? path === tab : path === 'about';
   });
 }
 
