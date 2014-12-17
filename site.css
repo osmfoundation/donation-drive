@@ -41,6 +41,9 @@ textarea {
 textarea:focus {
   border-color:#7092ff;
   }
+table {
+  table-layout:fixed;
+  }
 em {
   font-style:italic;
   }
