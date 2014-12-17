@@ -1,6 +1,41 @@
 var goal = 100000; // Target value to be raised.
-var raised = 25000; // Value raised so far.
-var backers = 250; // Number of folks donated.
+
+d3.csv('donors.csv')
+  .get(function(err, rows) {
+    var el = d3.select('#donor-list')
+      .selectAll('tr')
+      .data(rows)
+      .enter()
+      .append('tr')
+      .each(function(d) {
+        var selection = d3.select(this);
+        if (d.premium) {
+          selection.append('td')
+            .classed('strong', true)
+            .html(function() {
+              return '<span class="sprite crown"></span>' + d.name;
+            });
+        } else {
+          selection.append('td')
+            .text(d.name);
+        }
+        selection.append('td')
+          .text('£' + d.amount);
+        selection.append('td')
+          .text(function() {
+            return d.message ? d.message : '';
+          });
+      });
+
+      var raised = rows.reduce(function(memo, row) {
+        memo = memo + parseInt(row.amount, 10);
+        return memo;
+      }, 0); // Value raised so far.
+
+      d3.select('#js-raised').text('£' + commaNum(raised));
+      d3.select('#js-progress').style('width', (raised / goal) * 100 + '%');
+      d3.select('#js-backers').text(rows.length);
+  });
 
 // Helper function: Add commas to longer integers.
 function commaNum(x) {
@@ -33,10 +68,6 @@ function changeCount() {
   var c = d3.select('#count');
   c.text(count - v);
 }
-
-d3.select('#js-raised').text('£' + commaNum(raised));
-d3.select('#js-progress').style('width', (raised / goal) * 100 + '%');
-d3.select('#js-backers').text(backers);
 
 d3.select('textarea')
   .on('keydown', changeCount)
@@ -81,23 +112,3 @@ d3.selectAll('.tabs a').on('click', function(e) {
   if (current) slidecontainer.classed(current[0], false);
   slidecontainer.classed(tab, true);
 });
-
-d3.csv('donors.csv')
-  .get(function(err, rows) {
-    var el = d3.select('#donor-list')
-      .selectAll('tr')
-      .data(rows)
-      .enter()
-      .append('tr')
-      .each(function(d) {
-        var selection = d3.select(this);
-        selection.append('td')
-          .text(d.name);
-        selection.append('td')
-          .text('£' + d.amount);
-        selection.append('td')
-          .text(function() {
-            return d.message ? d.message : '';
-          });
-      });
-  });

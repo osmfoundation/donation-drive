@@ -1,4 +1,7 @@
-name,amount,message
-Richard Fairhurst,100,
-Chris Rock,50,Custom message
-Stephen Fry,50,Another custom message
+name,amount,message,premium
+Company name,30000,,true
+Another company,15000,,true
+Company,20000,,true
+Richard Fairhurst,100,,
+Chris Rock,50,Custom message,
+Stephen Fry,50,Another custom message,

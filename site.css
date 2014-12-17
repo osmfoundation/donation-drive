@@ -93,7 +93,7 @@ body { margin-top:40px; margin-bottom:40px; }
 ---------------------------------------------- */
 .sprite {
   background:transparent url(img/sprite@2x.png) no-repeat 0 0;
-  background-size:160px 100px;
+  background-size:120px 100px;
   }
   .sprite.logo {
     background-position:0 0;
@@ -102,8 +102,10 @@ body { margin-top:40px; margin-bottom:40px; }
     }
   .sprite.crown {
     background-position:-100px 0;
-    width:60px;
-    height:60px;
+    display:inline-block;
+    width:20px;
+    height:20px;
+    margin-right:5px;
     }
 
 .bg-hardware {
@@ -125,10 +127,12 @@ body { margin-top:40px; margin-bottom:40px; }
   top:8px;
   left:8px;
   right:8px;
+  min-width:1%;
+  max-width:100%;
   }
 
 .sliding {
-  min-height:480px;
+  min-height:640px;
   }
 .tabs {
   border-color:#ccc;
@@ -212,7 +216,7 @@ input[type='submit']:hover {
   font-size:18px;
   line-height:0;
   top:50px;
-  left:130px;
+  left:120px;
   }
 .before-custom-amount {
   position:absolute;
