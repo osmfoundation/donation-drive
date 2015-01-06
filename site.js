@@ -42,8 +42,11 @@ function activeTab() {
     case 'the-upgrade':
       slidecontainer.classed('active2', true);
     break;
-    case 'faq':
+    case 'details':
       slidecontainer.classed('active3', true);
+    break;
+    case 'faq':
+      slidecontainer.classed('active4', true);
     break;
     default:
       slidecontainer.classed('active1', true);
