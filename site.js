@@ -123,7 +123,7 @@ d3.select('#donate').on('submit', function(e) {
     };
 
     // Amount to be submitted to payment vendor.
-    console.log(vals);
+    // console.log(vals);
   }
 });
 

@@ -145,6 +145,8 @@ body { margin-top:40px; margin-bottom:40px; }
   border-radius:4px 4px 0 0;
   position:relative;
   top:1px;
+  padding-right:20px;
+  padding-left:20px;
   }
 .tabs a:focus {
   -webkit-box-shadow:none;
@@ -252,6 +254,7 @@ input.before {
   .avatar.firefishy1  { background-image:url(img/avatars/firefishy1.jpg); }
   .avatar.melaskia    { background-image:url(img/avatars/melaskia.png); }
   .avatar.burgess     { background-image:url(img/avatars/burgess.png); }
+  .avatar.lonvia     { background-image:url(img/avatars/lonvia.jpeg); }
   .avatar.anon        { background-image:url(img/avatars/anon.png); }
 
 /* Mobile
@@ -259,6 +262,10 @@ input.before {
 @media only screen and (max-width: 640px) {
   .sidebar {
     padding:20px;
+    }
+  .tabs a {
+    padding-right:10px;
+    padding-left:10px;
     }
   .keyline-left {
     border-left-width:0;
