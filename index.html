@@ -1,15 +1,390 @@
----
-layout: page
-title: OpenStreetMap Hardware Funding Drive 2014
----
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Donate to OpenStreetMap | OpenStreetMap</title>
+  <meta name='robots' content='index'/>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <meta name='twitter:site' content='@openstreetmap' />
+  <meta property='og:site_name' content='Donate to OpenStreetMap' />
+  <meta name='twitter:url' content='' />
+  <meta name='twitter:domain' content='http://donate.osm.org/' />
+  <meta property='og:url' content='' />
+  <meta name='twitter:title' content='Donate to OpenStreetMap' />
+  <meta property='og:title' content='Donate to OpenStreetMap' />
+  <meta name='twitter:description' content='OpenStreetMap is run and supported by volunteers like you. With more and more people helping to make great maps, we need bigger and faster servers to keep up with the demand. If you enjoy using or contributing to OpenStreetMap, please consider making a donation.' />
+  <meta property='og:description' content='OpenStreetMap is run and supported by volunteers like you. With more and more people helping to make great maps, we need bigger and faster servers to keep up with the demand. If you enjoy using or contributing to OpenStreetMap, please consider making a donation.' />
+  <meta name='twitter:image' content='http://donate.osm.org/img/twitter-card.png' />
+  <meta name='st:image' content='http://donate.osm.org/img/twitter-card.png' />
+  <meta property='og:image' content='http://donate.osm.org/img/twitter-card.png' />
+  <meta property='og:type' content='website' />
+  <meta name='twitter:card' content='summary_large_image' />
+  <link rel='shortcut icon' href='img/favicon.png' type='image/x-icon' />
+  <link href='base.css' rel='stylesheet' />
+  <link href='site.css' rel='stylesheet' />
+  <script src='js/d3.min.js'></script>
+</head>
+<body class='fill-darkgreen bg-hardware'>
 
-<!-- <h1>List of posts</h1> -->
-<dl class="posts">
-  {% assign sorted_posts = site.posts | sort:'order' %}
-  {% for post in sorted_posts %}
-    <dt><h2>&raquo; <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2></dt>
-    <dd>{{ post.excerpt }}</dd><br/>
-  {% endfor %}
-</dl>
+<div class='limiter clearfix'>
+  <div class='fill-dark dark col8 clearfix round-top'>
+
+    <div class='col12 clearfix pad2x contain fill-dark keyline-bottom round-top'>
+      <div class='sprite logo'></div>
+      <div class='pin-left strong'>
+        Support OpenStreetMap
+      </div>
+    </div>
+
+    <div class='pad2 dark'>
+      <h1>Bigger Servers for a Growing OpenStreetMap</h1>
+      <h2 class='quiet'>OpenStreetMap Hardware Funding Drive 2014</h2>
+    </div>
+  </div>
+
+</div>
+
+<div class='limiter clearfix'>
+  <div class='col4 fr fill-white pad4 keyline-left round-right sidebar'>
+
+    <div class='space-bottom1'>
+      <h2>Donate today</h2>
+      <h2><span id='js-raised'></span> <small>of £100,000 goal</small></h2>
+      <div class='progress-bar clip contain fill-darken0 col12'>
+        <div id='js-progress' class='progress fill-darkgreen pin-left block col12'></div>
+      </div>
+      <div class='strong center pad1y'>
+        <span id='js-backers'>0</span> <small>total supporters</small>
+      </div>
+    </div>
+
+    <p class='quiet'>Contribute using your credit card, PayPal, or <a href='http://wiki.openstreetmap.org/wiki/Donations'>other ways to give.</a></p>
+    <form id='donate'>
+      <fieldset>
+        <div class='grouped-options col12 clearfix'><!--
+--><input type='radio' name='amount' id='amount-15' checked=true /><label class='col4 block keyline-bottom' for='amount-15'>£15</label><!--
+--><input type='radio' name='amount' id='amount-30' /><label class='col4 block keyline-bottom keyline-left' for='amount-30'>£30</label><!--
+--><input type='radio' name='amount' id='amount-100' /><label class='col4 block keyline-bottom keyline-left' for='amount-100'>£100</label><!--
+--><input type='radio' name='amount' id='amount-250' /><label class='col4 block' for='amount-250'>£250</label><!--
+--><input type='radio' name='amount' id='amount-500' /><label class='col4 block keyline-left' for='amount-500'>£500</label><!--
+--><input type='radio' name='amount' id='amount-1000' /><label class='col4 block keyline-left' for='amount-1000'>£1000</label>
+        </div>
+      </fieldset>
+
+      <fieldset class='contain'>
+        <textarea name='message' class='col12 round' placeholder='Add optional message (limited to 140 characters)'></textarea>
+        <div class='pin-bottomright pad1'>
+          <small id='count' class='block text-right quiet strong'></small>
+        </div>
+      </fieldset>
+
+      <input type='submit' class='col12 space-bottom2' name='' value='Donate' />
+    </form>
+
+    <small>
+      Want to donate more? <a href='mailto:operations@osmfoundation.org'>email us</a>.
+      The OpenStreetMap foundation is under a non-profit status. For more information <a href='http://foundation.openstreetmap.org/'>click here</a>.
+    </small>
+
+  </div>
+  <div class='col8 fr'>
+    <div class='pad2 fill-white round-bottom'>
+
+      <div class='tabs col12 keyline-bottom space-bottom2'>
+           <a href='#about' class='inline pad1 active'>About</a><!--
+        --><a href='#the-upgrade' class='inline pad1'>The upgrade</a><!--
+        --><a href='#details' class='inline pad1'>Details &amp; budget</a><!--
+        --><a href='#faq' class='inline pad1'>FAQ</a>
+      </div>
 
 
+      <div class='prose sliding h active1'>
+
+        <!-- Tab one -->
+        <div>
+          <blockquote>
+            It's upgrade time! OpenStreetMap is growing, servers are projected to hit capacity by mid 2015. OpenStreetMap is a global community of dedicated and resourceful people, giving their time to make the best map of the world. Those mappers’ contributions are the largest part of the project. However, contributors need infrastructure such as a repository to share their contributions and services that help them make the map and talk to each other. We are raising funds to keep these services running and improve them, so that everyone else can continue making an amazing map.
+          </blockquote>
+          <div class='space-bottom4'>
+            <a href='https://twitter.com/gravitystorm' class='avatar andy contain' data-tooltip='Andy Allan'></a>
+            <a href='https://twitter.com/zerebubuth' class='avatar zerebubuth contain' data-tooltip='@zerebubuth'></a>
+            <a href='https://twitter.com/thughes' class='avatar thughes contain' data-tooltip='Tom Hughes'></a>
+            <a href='https://twitter.com/firefishy1' class='avatar firefishy1 contain' data-tooltip='Grant Slater'></a>
+            <a href='https://twitter.com/melaskia' class='avatar melaskia contain' data-tooltip='Emilie Laffray'></a>
+            <a href='http://www.openstreetmap.org/user/Jon%20Burgess' class='avatar burgess contain' data-tooltip='Jon Burgess'></a>
+            <a href='https://github.com/lonvia/' class='avatar lonvia contain' data-tooltip='Sarah Hoffmann'></a>
+            <span class='avatar anon contain' data-tooltip='Could be you!'></span>
+            <a href='http://www.osmfoundation.org/wiki/Operations_Working_Group'><em>&nbsp;&nbsp;&ndash;&nbsp;The Operations Working Group</em></a>
+          </div>
+
+          <h3>Donor list</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tbody id='donor-list'></tbody>
+          </table>
+        </div>
+
+        <!-- Tab two -->
+        <div>
+            <h2>The Upgrade</h2>
+
+            <p>// todo: add symbolic graph</p>
+
+            <p>Based on organic growth, OpenStreetMap.org is inching towards capacity. Our last funding drive was exactly designed to bring us to this point based on growth projections. We are now raising funds for an infrastructure upgrade that will sustain OpenStreetMap.org into late 2006.</p>
+
+            <h2 id="secondary-database-server">Secondary database server</h2>
+
+            <p>The secondary database server, <a href="https://wiki.openstreetmap.org/wiki/October_2014_server_maintenance">until recently</a> the primary, has
+            filled up almost all of its available disk space — which is great,
+            because it’s filling up with awesome mapping data generated by the
+            many thousands of dedicated contributors world-wide. We want to be
+            able to continue to store that growing set of data, and run the
+            website and API on it.</p>
+
+            <p>At the moment, the disks on that machine are configured in a
+            <a href="http://en.wikipedia.org/wiki/Nested_RAID_levels#RAID_1.2B0">high performance</a> setup and we will try to make some space
+            available by reconfiguring in a <a href="http://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_6">slightly lower perfomance</a>
+            setup. This may mean slower queries to the secondary machine, and
+            worse API performance. This would be even worse, should the primary
+            server fail and all the website and API database queries move to the
+            secondary. We don’t want the site and API to be slower — we want a
+            great experience for those dedicated contributors.</p>
+
+            <p>To avoid this, it would be better to have a machine closer in
+            <a href="http://wiki.openstreetmap.org/wiki/Servers/katla">specification</a> and performance to the primary database server in
+            case it is necessary to fail over to it. </p>
+
+            <h3 id="tile-rendering-servers">Tile rendering servers</h3>
+
+            <h4 id="primary">Primary</h4>
+
+            <p>The primary tile rendering machine is also quickly filling up the disk
+            space available to it — which is also great, as it’s filling with
+            the detailed geometries produced all the time by the global
+            community.</p>
+
+            <p>We want to be able to continue to serve up minutely-updated tiles to
+            everyone who is helping make OpenStreetMap more complete and more
+            detailed — or even just looking around. Unfortunately, this machine
+            is already stuffed full of high performance, high capacity disks,
+            which means we need to look at replacing it with something more modern
+            and larger.</p>
+
+            <h4 id="secondary">Secondary</h4>
+
+            <p>The secondary machine is going flat-out and the bottleneck is the
+            transfer of data to and from the disks. The machine could keep the
+            tiles more up-to-date if we removed that bottleneck, which means
+            upgrading the RAID controller and adding a mirror disk for the main
+            database.</p>
+
+            <h3 id="imagery-server">Imagery server</h3>
+
+            <p>We know that out-of-copyright (OOC) maps and aerial imagery are both
+            very useful sources for mapping activities, and we’re not happy that
+            the machine which used to serve this data is currently down. The
+            reason is that the large external disk arrays used to store the
+            imagery are very old and consume too much power for the home they are
+            in while our friends at UCL re-build the building which used to be
+            their home.</p>
+
+            <p>To fix this, we can get a smaller, more modern and more power
+            efficient server to serve that data, and get this service back online
+            where it’s useful to everyone.</p>
+
+            <p>(Side note: is it worth / possible looking at dumping the projected
+            images on S3?)</p>
+
+            <h3 id="services-machine-replica">Services machine replica</h3>
+
+            <p>The “services” machine currently runs a mix of stuff, including the
+            planet download site, backups and the internal configuration
+            server. All of these are also backed-up remotely, for safety. However,
+            it would take some time to recover those files from a remote backup,
+            simply due to the greater bandwidth within the server room. We would
+            like to have a “live” backup of this machine to minimise any downtime
+            when the primary machine, or the site it’s hosted at, aren’t
+            available.</p>
+
+            <h3 id="consumables">Consumables</h3>
+
+            <p>Sadly, nothing lasts forever. And hard disks, SSDs, RAID controller
+            batteries, PSUs, fans, cables and many other computer components don’t
+            even come close! Every year, we replace many of these items which have
+            failed or come to the end of their lives. Many are replaced under
+            warranty, but we still have to spend money on replacing or fixing
+            those which are out of warranty or not covered.</p>
+
+            <h2>History</h2>
+           <p>The Operations Working Group has scaled OpenStreetMap since 20XX. We're here to maintain servers day-to-day from applying security patches to fine tuning the stack. From time to time we apply larger upgrades, here are some of the more notable ones.</p>
+
+          <h4>2012 Upgrade</h4>
+          <ul>
+            <li>Updated</li>
+            <li>Migrated</li>
+            <li>As a result, we sped up Wiki editing which was a head ache before and made the tile server really snappy. This upgrade was projected to allow OpenStreetMap to scale into the summer of 2015.</li>
+          </ul>
+          <p>
+            <em>2012 budget: xxx</em>
+          </p>
+
+          <h4>2010 Upgrade</h4>
+          <ul>
+            <li>Updated</li>
+            <li>Migrated</li>
+            <li>As a result, we sped up Wiki editing which was a head ache before and made the tile server really snappy. This upgrade was projected to allow OpenStreetMap to scale into the summer of 2015.</li>
+          </ul>
+          <p>
+            <em>2010 budget: xxx</em>
+          </p>
+        </div>
+
+        <!-- Tab three -->
+        <div>
+          <h2>Details &amp; budget</h2>
+
+          <h2 id="secondary-database-server">Secondary database server</h2>
+
+          <p>The defining characteristic of a database server, for a database which
+          doesn’t fit entirely within RAM, is I/O performance. For that reason,
+          we choose a chassis which is able to accomodate a very large number of
+          disks — in this case, a whopping 72 2.5” 10K disks. Although we
+          don’t need all 72 (yet) we do need 25 900GB disks and it’s good to
+          know that the capacity is there for future expansion.</p>
+
+          <p>To keep as much of the data accessible as quickly as possible, we also
+          want lots of RAM to use as system cache. 256GB seems to be the largest
+          that it’s reasonable to get.</p>
+
+          <p>Finally, we add on a couple of good quality, enterprise grade
+          SSDs. For reliability and especially under hard power-off conditions,
+          you still want enterprise grade despite improvements in the pro-sumer
+          market.</p>
+
+          <p><strong>£21,000</strong></p>
+
+          <!-- S53959 = £ 20,440 -->
+          <!-- alternatively, S53963 = £ 14,207 -->
+
+          <h2 id="tile-rendering-servers">Tile rendering servers</h2>
+
+          <h4 id="primary">Primary</h4>
+
+          <p>Tile serving is about really good disk <em>read</em> performance, lots of
+          memory and a good CPU. It’s possible to fit almost all of a rendering
+          database in memory, if you buy enough. The optimal spot at the moment
+          seems to be getting about 128GB RAM and a couple of pro-sumer SSDs for
+          the most often accessed disk data. The amount of data being read
+          requires a good RAID controller, too. In this case, we’re looking at 8
+          600GB 15k SAS disks with a couple of 512GB Samsung 840 Pro SSDs.</p>
+
+          <p><strong>£9,500</strong></p>
+
+          <!-- S53960 = £ 9,365-->
+
+          <h4 id="secondary">Secondary</h4>
+
+          <p>It’s all about the I/O — the secondary tile server can’t handle it
+          at the moment, but the addition of a good RAID controller and a pair
+          of 512GB Samsung 840 Pro SSDs will soon sort that out.</p>
+
+          <p><strong>£1,500</strong></p>
+
+          <!-- LSI 9361-8i kit = £520 -->
+          <!-- 2x Samsung 850 Pro? 2x£470-->
+
+          <h2 id="imagery-server">Imagery server</h2>
+
+          <p>Serving aerial imagery is also about good disk performance, same as
+          serving tiles but the aerial imagery tiles tend to be quite large and
+          not rendered as often. Reprojecting and slicing up aerial imagery can
+          be CPU intensive though, so the specification for an aerial
+          imagery server looks a lot like that of a tile server but with more,
+          slower disk — 128GB RAM, a couple of low-voltage E5-2650Ls and 6 4TB
+          SAS3 disks.</p>
+
+          <p><strong>£9,000</strong></p>
+
+          <!-- S53961 = £ 8,740-->
+
+          <h2 id="services-machine-replica">Services machine replica</h2>
+
+          <p>The services machine does a lot of odd jobs; it serves GPS traces to
+          the website machines, it serves the
+          <a href="http://planet.openstreetmap.org">planet</a>, stores backups, aggregates
+          log files, runs the Chef configuration server and serves internal DNS
+          requests. All of this means it needs to be a general-purpose
+          machine, with quite a lot of RAM, decent CPUs and a lot of space for
+          storing all those GPS traces, dumps and planets. A suitable spec is a
+          couple of decent CPUs (E5-2650LV2s) with 256GB RAM and 9 4TB SAS2
+          disks.</p>
+
+          <p><strong>£10,500</strong></p>
+
+          <!-- S53962 = £ 10,220-->
+
+          <h2 id="consumables">Consumables</h2>
+
+          <p>Parts on hardware fail with alarming regularity, especially the
+          mechanical parts. Usually these are covered by the standard warranty
+          we get on all new machines, but some machines aren’t covered —
+          either because they’re donated or we buy them out of warranty to get a
+          good deal. The failures themselves are random, and therefore pretty
+          hard to predict, but a good rule of thumb is about 10% of the overall
+          budget as a contingency, so that’s about what we’ve estimated here.</p>
+
+          <p><strong>£ 4,500</strong></p>
+
+          <h2>Total: £56,000</h2>
+
+          <p>All numbers approximates based on market prices.</p>
+
+        </div>
+
+        <!-- Tab four -->
+        <div>
+          <h2>FAQ</h2>
+          <h3>Who's doing the upgrade?</h3>
+          <p>The OpenStreetMap Foundation's Operations Working Group. Read more about the <a href='https://gist.github.com/lxbarth/c2b13cfe8362a79bd654'>Operations Working Group over here</a>.</p>
+
+          <h4>What's the OpenStreetMap Foundation?</h4>
+          <p>The OpenStreetMap Foundation is the non-profit supporting the OpenStreetMap project by maintaining its servers, providing a legal structure around the project's database, by organizing an annual conference and more. <a href='http://osmfoundation.org/wiki/Main_Page'>Learn more about the OpenStreetMap Foundation on osmfoundation.org</a>.</p>
+
+          <h4>Why now?</h4>
+          <p>We plan our hardware funding drives based on 6 to 12 month projections of scaling the current platform. We've determined that at current growth, we'd see first significant downgrades in performance by mid-2015 and now's the time for building ahead.</p>
+
+          <h4>Who is receiving funds?</h4>
+          <p>The funding drive is an iniative by the OpenStreetMap Foundation's <a href='http://www.osmfoundation.org/wiki/Operations_Working_Group'>Operations Working Group (OWG)</a> - all funds are collected by the <a href='http://osmfoundation.org/'>OpenStreetMap Foundation</a> and made available to the Operations Working Group.</p>
+
+          <h4>Are you a 501(c)(3)?</h4>
+          <p>No. The OpenStreetMap Foundation is a <a href='https://blog.openstreetmap.org/about/'>UK-registered not-for-profit organization that supports the OpenStreetMap Project</a>. It is not a <a href='http://en.wikipedia.org/wiki/501%28c%29_organization#501.28c.29.283.29'>501(c)(3)</a> in the sense of the Internal Revenue Code of the US Internal Revenue Service (IRS).</p>
+
+          <h4>How long will these funds last?</h4>
+          <p>We have designed this funding drive to allow for investments that will let us scale OpenStreetMap's infrastructure into late 2016.</p>
+
+          <h4>Why only scale into late 2016?</h4>
+          <p>Everything else would be overbuilding. We also don't usually scale the same components. While we're for instance upgrading the load balancer this time, we'll probably not touch it the next time around.</p>
+
+          <h4>What's going to happen once you've used these funds?</h4>
+          <p>There will be another funding drive for hardware :) Seriously, the model of focused funding drives is working very well. It allows for a very clear value for money and it's what made it possible to scale OpenStreetMap from a small server in whose? basement to supporting billions of edited objects each month.</p>
+
+          <h4>What else can we do to support the Operation Working Group?</h4>
+          <p>Join us! Aside from funds to upgrade our hardware what we need most are people. If you're a skilled devops person, a database specialist, a passionate programmer looking to go deeper in the stack or if you're eager to learn more about scaling a huge data project - get in touch and join us in our work.</p>
+
+          <h4>How can I donate more?</h4>
+          <a href='mailto:operations@osmfoundation.org'>Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src='site.js'></script>
+</body>
+</html>
