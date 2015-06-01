@@ -23,6 +23,60 @@
   <link href='base.css' rel='stylesheet' />
   <link href='site.css' rel='stylesheet' />
   <script src='js/d3.min.js'></script>
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+function validateForm( form ) {
+  var minimums = {
+    'USD' : 1,
+    'GBP' : 1, // $1.26
+    'EUR' : 1, // $1.26
+    'AUD' : 2, // $1.35
+    'CAD' : 1, // $0.84
+    'CHF' : 1, // $0.85
+    'CZK' : 20, // $1.03
+    'DKK' : 5, // $0.85
+    'HKD' : 10, // $1.29
+    'HUF' : 200, // $0.97
+    'JPY' : 100, // $1
+    'NZD' : 2, // $1.18
+    'NOK' : 10, // $1.44
+    'PLN' : 5, // $1.78
+    'SGD' : 2, // $1.35
+    'SEK' : 10 // $1.28
+  };
+
+  var error = true;
+
+  // Get amount selection
+  var amount = null;
+  for ( var i = 0; i < form.amount.length; i++ ) {
+    if ( form.amount[i].checked ) {
+      amount = form.amount[i].value;
+    }
+  }
+  if ( form.amountGiven.value != "" ) {
+    amount = form.amountGiven.value;
+  }
+  // Check amount is a real number
+  error = ( amount == null || isNaN( amount ) || amount.value <= 0 );
+  if ( error ) {
+    alert( 'You must enter a valid amount.' );
+  }
+
+  // Check amount is at least the minimum
+  var currency = form.currency_code[form.currency_code.selectedIndex].value;
+  if ( typeof( minimums[currency] ) == 'undefined' ) {
+    minimums[currency] = 1;
+  }
+  if ( amount < minimums[currency] ) {
+    alert( 'You must contribute at least $1'.replace('$1', minimums[currency] + ' ' + currency ) );
+    error = true;
+  }
+  
+  return !error;
+}
+//]]>
+</script>
 </head>
 <body class='fill-darkgreen bg-hardware'>
 
@@ -58,28 +112,53 @@
       </div>
     </div>
 
-    <p class='quiet'>Contribute using your credit card, PayPal, or <a href='http://wiki.openstreetmap.org/wiki/Donations'>other ways to give.</a></p>
-    <form id='donate'>
-      <fieldset>
-        <div class='grouped-options col12 clearfix'><!--
---><input type='radio' name='amount' id='amount-15' checked=true /><label class='col4 block keyline-bottom' for='amount-15'>£15</label><!--
---><input type='radio' name='amount' id='amount-30' /><label class='col4 block keyline-bottom keyline-left' for='amount-30'>£30</label><!--
---><input type='radio' name='amount' id='amount-100' /><label class='col4 block keyline-bottom keyline-left' for='amount-100'>£100</label><!--
---><input type='radio' name='amount' id='amount-250' /><label class='col4 block' for='amount-250'>£250</label><!--
---><input type='radio' name='amount' id='amount-500' /><label class='col4 block keyline-left' for='amount-500'>£500</label><!--
---><input type='radio' name='amount' id='amount-1000' /><label class='col4 block keyline-left' for='amount-1000'>£1000</label>
-        </div>
-      </fieldset>
+    <p class='quiet'>Contribute with your credit card through PayPal. (Other ways to give, including electronic funds transfer can be <a href="http://wiki.openstreetmap.org/wiki/Donations">found here</a>.)</p>
+<form method="post" action="../process/paypal-submit.php" name="paypalcontribution" onsubmit="return validateForm(this)">
+<p><input type="hidden" name="gateway" value="paypal" /><input type="hidden" name="language" value="en" /></p>
+<!-- CONTENT BEGIN -->
+<div id="sub-title">Amount</div>
+<div id="amount-box">
+<p><input type="radio" name="amount" id="input_amount_1" onclick="document.paypalcontribution. amountGiven.value = '15'" /><label for="input_amount_1">£15</label> 
+<input type="radio" name="amount" id="input_amount_2" onclick="document.paypalcontribution. amountGiven.value = '50'" /><label for="input_amount_2">£50</label> 
+<input type="radio" name="amount" id="input_amount_3" onclick="document.paypalcontribution. amountGiven.value = '100'" /><label for="input_amount_3">£100</label> 
+<input type="radio" name="amount" id="input_amount_other" value="Other" />&#160;<label for="input_amount_other">Other:</label>&#160;<input type="text" name="amountGiven" size="5" onfocus="this.form.input_amount_other.checked=true;" /><!-- currency menu 
+--><select name="currency_code" id="input_currency_code" size="1">
+<option value="GBP" selected="selected">GBP – £</option>
+<option value="XXX">-------</option>
+<option value="GBP">GBP – £</option>
+<option value="EUR">EUR – €</option>
+<option value="USD">USD - $</option>
+<option value="AUD">AUD – $</option>
+<option value="CAD">CAD – $</option>
+<option value="CHF">CHF –</option>
+<option value="CZK">CZK – Kč</option>
 
-      <fieldset class='contain'>
-        <textarea name='message' class='col12 round' placeholder='Add optional message (limited to 140 characters)'></textarea>
-        <div class='pin-bottomright pad1'>
-          <small id='count' class='block text-right quiet strong'></small>
-        </div>
-      </fieldset>
+<option value="DKK">DKK – kr</option>
+<option value="EUR">EUR – €</option>
+<option value="HKD">HKD – HK$</option>
+<option value="HUF">HUF – Ft</option>
+<option value="GBP">GBP – £</option>
+<option value="JPY">JPY – ¥</option>
+<option value="NZD">NZD – NZ$</option>
+<option value="NOK">NOK – kr</option>
+<option value="PLN">PLN – zł</option>
 
-      <input type='submit' class='col12 space-bottom2' name='' value='Donate' />
-    </form>
+<option value="SGD">SGD – S$</option>
+<option value="SEK">SEK – kr</option>
+<option value="USD">USD – $</option>
+</select></p></div>
+<div id="blue-title">Public Comment</div>
+<div class="quiet">Have a thought to share with the world? Put up to 200 characters here:</div>
+<input type="text" name="comment" size="30" maxlength="200" />
+<div class="small"><input type="checkbox" name="comment-option" id="input_comment-option" value="comment" checked="checked" />&#160;&#160;<label for="input_comment-option">Please list my name (next to my comment) on the public donor list.</label></div>
+<br />
+<div>Your credit card donation will be processed by PayPal. The charge will appear as "OpenStreetMap Foundation" on your credit card statement.</div>
+<br />
+<input type="submit" value="DONATE" class="red-input-button" />
+<div class="small">For more information about the OpenStreetMap Foundation’s non-profit status, the Treasurer’s Report, or other questions, <a href="http://foundation.openstreetmap.org/">click here</a>.</div>
+<br /><br />&nbsp;
+<!-- CONTENT END -->
+</form>
 
     <small>
       Want to donate more? <a href='mailto:operations@osmfoundation.org'>email us</a>.
