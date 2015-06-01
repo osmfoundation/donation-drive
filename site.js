@@ -79,7 +79,7 @@ d3.csv('donors.csv')
             .text(d.name);
         }
         selection.append('td')
-          .text('£' + commaNum(d.amount));
+          .text(d.currency + ' ' + commaNum(d.amount));
         selection.append('td')
           .text(function() {
             return d.message ? d.message : '';
@@ -87,7 +87,7 @@ d3.csv('donors.csv')
       });
 
       var raised = rows.reduce(function(memo, row) {
-        memo = memo + parseInt(row.amount, 10);
+        memo = memo + parseInt(row.amount_gbp, 10);
         return memo;
       }, 0); // Value raised so far.
 

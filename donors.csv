@@ -1,7 +1,7 @@
-name,amount,message,premium
-Company name,30000,,true
-Company,20000,,true
-Another company,15000,,true
-Richard Fairhurst,100,,
-Chris Rock,50,Much luck guys & thanks for all the sweat and tears.,
-Stephen Fry,50,W00t!,
+name,amount,currency,amount_gbp,message,premium
+Company name,30000,GBP,30000,,true
+Company,30000,USD,20000,,true
+Another company,15000,USD,10000,,true
+Richard Fairhurst,100,GBP,100,,
+Chris Rock,50,GBP,50,Much luck guys & thanks for all the sweat and tears.,
+Stephen Fry,50,GBP,50,W00t!,
