@@ -114,7 +114,7 @@ function validateForm( form ) {
 
     <p class='quiet'>Contribute with your credit card through PayPal. (Other ways to give, including electronic funds transfer can be <a href="http://wiki.openstreetmap.org/wiki/Donations">found here</a>.)</p>
 <form method="post" action="../process/paypal-submit.php" name="paypalcontribution" onsubmit="return validateForm(this)">
-<p><input type="hidden" name="gateway" value="paypal" /><input type="hidden" name="language" value="en" /></p>
+<p><input type="hidden" name="gateway" value="paypal" /><input type="hidden" name="target" value="server2015" /><input type="hidden" name="language" value="en" /></p>
 <!-- CONTENT BEGIN -->
 <div id="sub-title">Amount</div>
 <div id="amount-box">
