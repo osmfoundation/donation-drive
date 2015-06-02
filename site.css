@@ -121,7 +121,7 @@ body { margin-top:40px; margin-bottom:40px; }
 ---------------------------------------------- */
 .progress-bar {
   border-radius:50px;
-  height:30px;
+  height:35px;
   }
 .progress {
   border-radius:50px;
@@ -254,7 +254,7 @@ input.before {
   .avatar.firefishy1  { background-image:url(img/avatars/firefishy1.jpg); }
   .avatar.melaskia    { background-image:url(img/avatars/melaskia.png); }
   .avatar.burgess     { background-image:url(img/avatars/burgess.png); }
-  .avatar.lonvia     { background-image:url(img/avatars/lonvia.jpeg); }
+  .avatar.lonvia      { background-image:url(img/avatars/lonvia.jpeg); }
   .avatar.anon        { background-image:url(img/avatars/anon.png); }
 
 /* Mobile

@@ -104,8 +104,8 @@ function validateForm( form ) {
     <div class='space-bottom1'>
       <h2>Donate today</h2>
       <h2><span id='js-raised'></span> <small>of £56,000 goal</small></h2>
-      <div class='progress-bar clip contain fill-darken0 col12'>
-        <div id='js-progress' class='progress fill-darkgreen pin-left block col12'></div>
+      <div class='progress-bar clip pad1 fill-darken0 col12'>
+        <div id='js-progress' class='progress fill-darkgreen block col12'></div>
       </div>
       <div class='strong center pad1y'>
         <span id='js-backers'>0</span> <small>total supporters</small>
@@ -113,57 +113,79 @@ function validateForm( form ) {
     </div>
 
     <p class='quiet'>Contribute with your credit card through PayPal. (Other ways to give, including electronic funds transfer can be <a href="http://wiki.openstreetmap.org/wiki/Donations">found here</a>.)</p>
-<form method="post" action="../process/paypal-submit.php" name="paypalcontribution" onsubmit="return validateForm(this)">
-<p><input type="hidden" name="gateway" value="paypal" /><input type="hidden" name="target" value="server2015" /><input type="hidden" name="language" value="en" /></p>
+
+<form method='post' action='../process/paypal-submit.php' name='paypalcontribution' onsubmit='return validateForm(this)'>
+  <input type='hidden' name='gateway' value='paypal' />
+  <input type='hidden' name='target' value='server2015' />
+  <input type='hidden' name='language' value='en' />
+
 <!-- CONTENT BEGIN -->
-<div id="sub-title">Amount</div>
-<div id="amount-box">
-<p><input type="radio" name="amount" id="input_amount_1" onclick="document.paypalcontribution. amountGiven.value = '15'" /><label for="input_amount_1">£15</label> 
-<input type="radio" name="amount" id="input_amount_2" onclick="document.paypalcontribution. amountGiven.value = '50'" /><label for="input_amount_2">£50</label> 
-<input type="radio" name="amount" id="input_amount_3" onclick="document.paypalcontribution. amountGiven.value = '100'" /><label for="input_amount_3">£100</label> 
-<input type="radio" name="amount" id="input_amount_other" value="Other" />&#160;<label for="input_amount_other">Other:</label>&#160;<input type="text" name="amountGiven" size="5" onfocus="this.form.input_amount_other.checked=true;" /><!-- currency menu 
---><select name="currency_code" id="input_currency_code" size="1">
-<option value="GBP" selected="selected">GBP – £</option>
-<option value="XXX">-------</option>
-<option value="GBP">GBP – £</option>
-<option value="EUR">EUR – €</option>
-<option value="USD">USD - $</option>
-<option value="AUD">AUD – $</option>
-<option value="CAD">CAD – $</option>
-<option value="CHF">CHF –</option>
-<option value="CZK">CZK – Kč</option>
+<div id='amount-box' class='space-bottom1'>
+  <div class='grouped-options col12 clearfix'>
+    <input type='radio' name='amount' id='input_amount_1' onclick='document.paypalcontribution. amountGiven.value = "15"' />
+    <label class='col4 block keyline-bottom' for='input_amount_1'>£15</label> 
+    <input type='radio' name='amount' id='input_amount_2' onclick='document.paypalcontribution. amountGiven.value = "50"' />
+    <label class='col4 block keyline-left keyline-bottom' for='input_amount_2'>£50</label> 
+    <input type='radio' name='amount' id='input_amount_3' onclick='document.paypalcontribution. amountGiven.value = "100"' />
+    <label class='col4 block keyline-left keyline-bottom' for='input_amount_3'>£100</label> 
+    <input type='radio' name='amount' id='input_amount_other' value='Other' />
+    <label class='col12 fl block' for='input_amount_other'>Other amount</label>
+  </div>
 
-<option value="DKK">DKK – kr</option>
-<option value="EUR">EUR – €</option>
-<option value="HKD">HKD – HK$</option>
-<option value="HUF">HUF – Ft</option>
-<option value="GBP">GBP – £</option>
-<option value="JPY">JPY – ¥</option>
-<option value="NZD">NZD – NZ$</option>
-<option value="NOK">NOK – kr</option>
-<option value="PLN">PLN – zł</option>
+  <div class='col12 clearfix'>
+    <input type='text' name='amountGiven' class='col5' onfocus='this.form.input_amount_other.checked=true;' />
+    
+    <!-- currency menu -->
+    <div class='margin1 col6 pad1y'>
+      <select name='currency_code' id='input_currency_code' class='col12'>
+        <option value="GBP" selected="selected">GBP – £</option>
+        <option value="XXX">-------</option>
+        <option value="GBP">GBP – £</option>
+        <option value="EUR">EUR – €</option>
+        <option value="USD">USD - $</option>
+        <option value="AUD">AUD – $</option>
+        <option value="CAD">CAD – $</option>
+        <option value="CHF">CHF –</option>
+        <option value="CZK">CZK – Kč</option>
 
-<option value="SGD">SGD – S$</option>
-<option value="SEK">SEK – kr</option>
-<option value="USD">USD – $</option>
-</select></p></div>
-<div id="blue-title">Public Comment</div>
-<div class="quiet">Have a thought to share with the world? Put up to 200 characters here:</div>
-<input type="text" name="comment" size="30" maxlength="200" />
-<div class="small"><input type="checkbox" name="comment-option" id="input_comment-option" value="comment" checked="checked" />&#160;&#160;<label for="input_comment-option">Please list my name (next to my comment) on the public donor list.</label></div>
-<br />
-<div>Your credit card donation will be processed by PayPal. The charge will appear as "OpenStreetMap Foundation" on your credit card statement.</div>
-<br />
-<input type="submit" value="DONATE" class="red-input-button" />
-<div class="small">For more information about the OpenStreetMap Foundation’s non-profit status, the Treasurer’s Report, or other questions, <a href="http://foundation.openstreetmap.org/">click here</a>.</div>
-<br /><br />&nbsp;
+        <option value="DKK">DKK – kr</option>
+        <option value="EUR">EUR – €</option>
+        <option value="HKD">HKD – HK$</option>
+        <option value="HUF">HUF – Ft</option>
+        <option value="GBP">GBP – £</option>
+        <option value="JPY">JPY – ¥</option>
+        <option value="NZD">NZD – NZ$</option>
+        <option value="NOK">NOK – kr</option>
+        <option value="PLN">PLN – zł</option>
+
+        <option value="SGD">SGD – S$</option>
+        <option value="SEK">SEK – kr</option>
+        <option value="USD">USD – $</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<small class='space-bottom1 block'>Add optional public message</small>
+<div class='space-bottom1'>
+  <textarea class='col12 round space-bottom1 block' name='comment' maxlength='200' placeholder='Limited to 200 characters'></textarea>
+  <div class='small'>
+    <input type='checkbox' name='comment-option' id='input_comment-option' value='comment' checked='checked' />
+    <label for='input_comment-option'>List my name on the public donor list.</label>
+  </div>
+</div>
+
+<div class='quiet space-bottom1'>
+  Your credit card donation will be processed by PayPal. The charge will appear as "OpenStreetMap Foundation" on your credit card statement.
+</div>
+
+<input type='submit' value='Donate' class='col12 space-bottom2' />
+<small>
+  For more information about the OpenStreetMap Foundation’s non-profit status, the Treasurer’s Report, or other questions, <a href='http://foundation.openstreetmap.org/'>click here</a>.
+</small>
+
 <!-- CONTENT END -->
 </form>
-
-    <small>
-      Want to donate more? <a href='mailto:operations@osmfoundation.org'>email us</a>.
-      The OpenStreetMap foundation is under a non-profit status. For more information <a href='http://foundation.openstreetmap.org/'>click here</a>.
-    </small>
 
   </div>
   <div class='col8 fr'>
