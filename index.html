@@ -25,6 +25,73 @@
   <script src='js/d3.min.js'></script>
 <script type="text/javascript" language="javascript">
 //<![CDATA[
+var g_amount_1 = 15;
+var g_amount_2 = 50;
+var g_amount_3 = 100;
+
+function formatCurrency(amount, currency) {
+  var currencies = {
+    'USD' : ['$', true],
+    'GBP' : ['£', true],
+    'EUR' : ['€', false],
+    'AUD' : ['$', true],
+    'CAD' : ['$', true],
+    'CHF' : ['Fr', false],
+    'CZK' : ['Kč', false],
+    'DKK' : ['kr', false],
+    'HKD' : ['HK$', true],
+    'HUF' : ['Ft', false],
+    'JPY' : ['¥', true],
+    'NZD' : ['NZ$', true],
+    'NOK' : ['kr', false],
+    'PLN' : ['zł', false],
+    'SGD' : ['S$', true],
+    'SEK' : ['kr', false]
+  };
+
+  var txt = "";
+  if (currencies[currency][1]) {
+    txt += currencies[currency][0];
+  }
+  txt += "" + amount;
+  if (!currencies[currency][1]) {
+    txt += currencies[currency][0];
+  }
+  return txt;
+}
+
+function updateCurrencies(select) {
+  var multipliers = {
+    'USD' : 1,
+    'GBP' : 1, // $1.26
+    'EUR' : 1, // $1.26
+    'AUD' : 2, // $1.35
+    'CAD' : 1, // $0.84
+    'CHF' : 1, // $0.85
+    'CZK' : 20, // $1.03
+    'DKK' : 5, // $0.85
+    'HKD' : 10, // $1.29
+    'HUF' : 200, // $0.97
+    'JPY' : 100, // $1
+    'NZD' : 2, // $1.18
+    'NOK' : 10, // $1.44
+    'PLN' : 5, // $1.78
+    'SGD' : 2, // $1.35
+    'SEK' : 10 // $1.28
+  };
+
+  var currency = select.options[select.selectedIndex].value;
+  g_amount_1 = 15.0 * multipliers[currency];
+  g_amount_2 = 50.0 * multipliers[currency];
+  g_amount_3 = 100.0 * multipliers[currency];
+
+  document.getElementById('label_amount_1').innerHTML = formatCurrency(g_amount_1, currency);
+  document.getElementById('label_amount_2').innerHTML = formatCurrency(g_amount_2, currency);
+  document.getElementById('label_amount_3').innerHTML = formatCurrency(g_amount_3, currency);
+
+  document.getElementById('input_amount_other').checked = true;
+}
+
 function validateForm( form ) {
   var minimums = {
     'USD' : 1,
@@ -122,12 +189,12 @@ function validateForm( form ) {
 <!-- CONTENT BEGIN -->
 <div id='amount-box' class='space-bottom1'>
   <div class='grouped-options col12 clearfix'>
-    <input type='radio' name='amount' id='input_amount_1' onclick='document.paypalcontribution. amountGiven.value = "15"' />
-    <label class='col4 block keyline-bottom' for='input_amount_1'>£15</label> 
-    <input type='radio' name='amount' id='input_amount_2' onclick='document.paypalcontribution. amountGiven.value = "50"' />
-    <label class='col4 block keyline-left keyline-bottom' for='input_amount_2'>£50</label> 
-    <input type='radio' name='amount' id='input_amount_3' onclick='document.paypalcontribution. amountGiven.value = "100"' />
-    <label class='col4 block keyline-left keyline-bottom' for='input_amount_3'>£100</label> 
+    <input type='radio' name='amount' id='input_amount_1' onclick='document.paypalcontribution. amountGiven.value = g_amount_1' />
+    <label id='label_amount_1' class='col4 block keyline-bottom' for='input_amount_1'>£15</label>
+    <input type='radio' name='amount' id='input_amount_2' onclick='document.paypalcontribution. amountGiven.value = g_amount_2' />
+    <label id='label_amount_2' class='col4 block keyline-left keyline-bottom' for='input_amount_2'>£50</label>
+    <input type='radio' name='amount' id='input_amount_3' onclick='document.paypalcontribution. amountGiven.value = g_amount_3' />
+    <label id='label_amount_3' class='col4 block keyline-left keyline-bottom' for='input_amount_3'>£100</label>
     <input type='radio' name='amount' id='input_amount_other' value='Other' />
     <label class='col12 fl block' for='input_amount_other'>Other amount</label>
   </div>
@@ -137,7 +204,7 @@ function validateForm( form ) {
     
     <!-- currency menu -->
     <div class='margin1 col6 pad1y'>
-      <select name='currency_code' id='input_currency_code' class='col12'>
+      <select name='currency_code' id='input_currency_code' class='col12' onchange='updateCurrencies(this)' >
         <option value="GBP" selected="selected">GBP – £</option>
         <option value="XXX">-------</option>
         <option value="GBP">GBP – £</option>
