@@ -91,8 +91,8 @@ d3.csv('donors.csv')
         return memo;
       }, 0); // Value raised so far.
 
-      d3.select('#js-raised').text('£' + commaNum((raised) ? raised : '0'));
-      d3.select('#js-progress').style('width', (raised / goal) * 100 + '%');
+      //d3.select('#js-raised').text('£' + commaNum((raised) ? raised : '0'));
+      //d3.select('#js-progress').style('width', (raised / goal) * 100 + '%');
       d3.select('#js-backers').text(rows.length);
   });
 
