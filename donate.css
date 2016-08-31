@@ -1,0 +1,12 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.donate .btn {
+  margin: 5px 0;
+}
+
+.donate .now-buttons {
+	width: 80%;
+}
