@@ -1,5 +1,5 @@
 body {
-  padding-top: 10px;
+  padding-top: 0px;
   padding-bottom: 10px;
 }
 
@@ -12,7 +12,7 @@ body {
 	width: 80%;
 }
 
-.donate .jumbotron {
+.cover.jumbotron {
 	padding: 20px;
 	background-image: url('group_photo.png');
 	background-repeat: none;
