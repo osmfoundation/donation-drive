@@ -14,7 +14,10 @@ body {
 
 .cover.jumbotron {
 	padding: 20px;
+	text-align: center;
 	background-image: url('group_photo.png');
 	background-repeat: none;
-	text-align: center;
+	background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
