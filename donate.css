@@ -3,21 +3,51 @@ body {
   padding-bottom: 10px;
 }
 
-.donate .btn {
-  margin: 5px 0;
-  width: 220px;
-}
-
-.donate .now-buttons {
-	width: 80%;
-}
-
-.cover.jumbotron {
+#cover {
 	padding: 20px;
 	text-align: center;
-	background-image: url('group_photo.png');
+	background-image: url('group_photo-01.png');
 	background-repeat: none;
 	background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
+
+.btn.donate {
+	height:60px;
+	width: 240px;
+	border-radius: 3px;
+	background-color: #80ba06;
+	transition: background-color 0.3s ease;
+	background-image: inherit;
+	text-shadow: inherit;
+	border-width:0;
+	box-shadow: inherit;
+}
+.btn.donate:hover {
+	background-color: #ea8d97;
+}
+
+#cover .btn.donate {
+	margin: 40px 0;
+}
+
+#donate-options .btn.donate {
+  margin: 10px 0;
+}
+
+input {
+	width:70px;
+	color: #222;
+}
+
+#currency-options { 
+	margin: 20px 0;
+	padding: 10px 10px;
+}
+#currency-options > div {
+	display: inline-block;
+}
+
+
+

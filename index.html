@@ -21,21 +21,22 @@
   </head>
   <body>
 
-    <div class="jumbotron cover">
+    <div class="jumbotron" id="cover">
       <h1>Donate to OpenStreetMap</h1>
       <p>Support the free world map made by people like you!</p>
       <p>
-        <button type="button" class="btn btn-lg btn-success">
+        <button type="button" class="btn btn-lg btn-success donate">
           <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate €20 now
         </button>
       </p>
-      <p style="font-size:small">More donation options below</p>
     </div>
 
-    <div class="container donate" role="main">
+    <div class="container" id="donation" role="main">
 
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
+      <div class="row center-block">
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span>60% funding completed</span></div>
+        </div>
       </div>
 
       <div class="panel panel-success">
@@ -52,47 +53,55 @@
         </div>
       </div>
 
-    <div class="row center-block">
-      <div class="col-lg-3 col-md-4">
-        <button type="button" class="btn btn-lg btn-success">
-          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate €10 now
-        </button>
+      <div class="row center-block" id="donate-options">
+        <div class="col-md-4 col-sm-6">
+          <button type="button" class="btn btn-lg btn-success donate">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate €10 now
+          </button>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <button type="button" class="btn btn-lg btn-success donate">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate €20 now
+          </button>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <button type="button" class="btn btn-lg btn-success donate">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate €50 now
+          </button>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <button type="button" class="btn btn-lg btn-success donate">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate €100 now
+          </button>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <button type="button" class="btn btn-lg btn-success donate">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate €250 now
+          </button>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <button type="button" class="btn btn-lg btn-success donate custom">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate € <input type="text" name="amount">
+        </div>
       </div>
-      <div class="col-lg-3 col-md-4">
-        <button type="button" class="btn btn-lg btn-success">
-          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate €20 now
-        </button>
+      <hr>
+      <div class="row center-block center" id="currency-options">
+        <div><p>Use my currency</p></div>
+        <div class="btn-group" role="group" aria-label="currency-list">
+          <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span></button>
+          <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-gbp" aria-hidden="true"></span></button>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Others
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Currency1</a></li>
+              <li><a href="#">Currency2</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-3 col-md-4">
-        <button type="button" class="btn btn-lg btn-success">
-          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate €50 now
-        </button>
-      </div>
-      <div class="col-lg-3 col-md-4">
-        <button type="button" class="btn btn-lg btn-success">
-          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate €100 now
-        </button>
-      </div>
-      <div class="col-lg-3 col-md-4">
-        <button type="button" class="btn btn-lg btn-success">
-          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate €250 now
-        </button>
-      </div>
-    </div>
-    <hr>
-    <div class="row center-block">
-      <div class="col-lg-2 col-md-4 text-center">
-			€<input type="text" name="amount"></button>
-      </div>
-      <div class="col-lg-2 col-md-4">
-        <button type="button" class="btn btn-lg btn-success">
-          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate now 
-        </button>
-      </div>
-    </div>
-
-      <p>
-      </p>
 
       <div class="well">
         <p>You will be redirected to PayPal to complete your donation. You do not need a PayPal account to make a donation. Your credit card donation will be processed by PayPal. The charge will appear as "OpenStreetMap Foundation" on your credit card statement. Other ways to give, including electronic funds transfer can be <a href="http://wiki.openstreetmap.org/wiki/Donations">found here</a>.</p>
