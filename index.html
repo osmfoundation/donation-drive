@@ -63,21 +63,21 @@ function formatCurrency(amount, currency) {
 function updateCurrencies(select) {
   var multipliers = {
     'USD' : 1,
-    'GBP' : 1, // $1.26
-    'EUR' : 1, // $1.26
-    'AUD' : 2, // $1.35
+    'GBP' : 1, // $1.31
+    'EUR' : 1, // $1.12
+    'AUD' : 2, // $1.50
     'CAD' : 1, // $0.84
-    'CHF' : 1, // $0.85
+    'CHF' : 1, // $1.02
     'CZK' : 20, // $1.03
-    'DKK' : 5, // $0.85
+    'DKK' : 5, // $0.75
     'HKD' : 10, // $1.29
-    'HUF' : 200, // $0.97
+    'HUF' : 250, // $0.98
     'JPY' : 100, // $1
-    'NZD' : 2, // $1.18
-    'NOK' : 10, // $1.44
-    'PLN' : 5, // $1.78
-    'SGD' : 2, // $1.35
-    'SEK' : 10 // $1.28
+    'NZD' : 2, // $1.45
+    'NOK' : 10, // $1.20
+    'PLN' : 5, // $1.29
+    'SGD' : 2, // $1.46
+    'SEK' : 10 // $1.17
   };
 
   var currency = select.options[select.selectedIndex].value;
@@ -169,14 +169,17 @@ function validateForm( form ) {
   <div class='col4 fr fill-white pad4 keyline-left round-right sidebar'>
 
     <div class='space-bottom1'>
-      <h2>Goal reached!</h2>
-      <h2><span id='js-extra'>£0</span> <small>over the £56,000 goal</small></h2>
+      <h2>Donate today</h2>
+      <h2><span id='js-raised'></span> <small>of £56,000 goal</small></h2>
+      <div class='progress-bar clip pad1 fill-darken0 col12'>
+        <div id='js-progress' class='progress fill-darkgreen block col12'></div>
+      </div>
       <div class='strong center pad1y'>
-        <small>Thanks to</small> <span id='js-backers'>0</span> <small>supporters</small>
+        <span id='js-backers'>0</span> <small>total supporters</small>
       </div>
     </div>
 
-    <p class='quiet'>You can still contribute with your credit card through PayPal. (Other ways to give, including electronic funds transfer can be <a href="http://wiki.openstreetmap.org/wiki/Donations">found here</a>.)</p>
+    <p class='quiet'>Contribute with your credit card through PayPal. (Other ways to give, including electronic funds transfer can be <a href="http://wiki.openstreetmap.org/wiki/Donations">found here</a>.)</p>
 
 <form method='post' action='../process/paypal-submit.php' name='paypalcontribution' onsubmit='return validateForm(this)'>
   <input type='hidden' name='gateway' value='paypal' />
