@@ -169,14 +169,17 @@ function validateForm( form ) {
   <div class='col4 fr fill-white pad4 keyline-left round-right sidebar'>
 
     <div class='space-bottom1'>
-      <h2>Goal reached!</h2>
-      <h2><small>We reached the £56,000 goal</small></h2>
+      <h2>Donate today</h2>
+      <h2><span id='js-raised'></span> <small>of £56,000 goal</small></h2>
+      <div class='progress-bar clip pad1 fill-darken0 col12'>
+        <div id='js-progress' class='progress fill-darkgreen block col12'></div>
+      </div>
       <div class='strong center pad1y'>
-        <small>Thanks to</small> <span id='js-backers'>0</span> <small>total supporters</small>
+        <span id='js-backers'>0</span> <small>total supporters</small>
       </div>
     </div>
 
-    <p class='quiet'>You can still contribute with your credit card through PayPal. (Other ways to give, including electronic funds transfer can be <a href="http://wiki.openstreetmap.org/wiki/Donations">found here</a>.)</p>
+    <p class='quiet'>Contribute with your credit card through PayPal. (Other ways to give, including electronic funds transfer can be <a href="http://wiki.openstreetmap.org/wiki/Donations">found here</a>.)</p>
 
 <form method='post' action='../process/paypal-submit.php' name='paypalcontribution' onsubmit='return validateForm(this)'>
   <input type='hidden' name='gateway' value='paypal' />
@@ -267,9 +270,6 @@ function validateForm( form ) {
 
         <!-- Tab one -->
         <div>
-          <blockquote>
-            Thanks to your generosity, we have reached our target of £56,000 and the funds in place to make the planned server upgrades a reality. A big Thank You to the huge number of people and companies who contributed, and especially to our launch partners Mapbox and Mapzen!
-          </blockquote>
           <blockquote>
             It's upgrade time! OpenStreetMap is growing, servers are projected to hit capacity by mid 2015. OpenStreetMap is a global community of dedicated and resourceful people, giving their time to make the best map of the world. Those mappers’ contributions are the largest part of the project. However, contributors need infrastructure such as a repository to share their contributions and services that help them make the map and talk to each other. We are raising funds to keep these services running and improve them, so that everyone else can continue making an amazing map.
           </blockquote>
