@@ -1,0 +1,81 @@
+body {
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+#cover {
+	padding: 20px;
+	text-align: center;
+	background-image: url('group_photo-01.png');
+	background-repeat: none;
+	background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+/*
+.btn.donate {
+	height:60px;
+	width: 240px;
+	border-radius: 3px;
+	border: #5a3 solid 2px;
+	color: #5a3;
+	background-image: inherit; 
+	background-color: none;
+	text-shadow: inherit;
+	box-shadow: inherit;
+}
+.btn.donate:hover {
+	border-color: #ea8d97;
+	color: #ea8d97;
+}
+*/
+
+#why-donate {
+	background-color: #ffd;
+	padding: 10px;
+}
+
+.progress-bar {
+	background-color: #3b8;
+	background-image: none;
+}
+
+.btn.donate {
+	height:60px;
+	width: 240px;
+	border-radius: 3px;
+	border-width: 0;
+	background-color: #5a3;
+	background-image: inherit; 
+	text-shadow: inherit;
+	box-shadow: inherit;
+}
+.btn.donate:hover {
+	background-color: #3b8;
+}
+
+#cover .btn.donate {
+	margin: 40px 0;
+}
+
+#donate-options .btn.donate {
+  margin: auto;
+  margin-top: 20px;
+}
+
+input {
+	width:70px;
+	color: #222;
+}
+
+#currency-options { 
+	margin: auto;
+	padding: 10px 10px;
+}
+#currency-options > div {
+	display: inline-block;
+}
+
+
+

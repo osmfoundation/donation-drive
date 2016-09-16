@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Donate to OSM</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="donate.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="jumbotron" id="cover">
+      <h1>Donate to OpenStreetMap</h1>
+      <p>Support the free world map made by people like you!</p>
+      <p>
+        <button type="button" class="btn btn-lg btn-success donate">
+          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate €20 now
+        </button>
+      </p>
+    </div>
+
+    <div class="container" id="donation" role="main">
+
+      <div class="row center-block" id="why-donate">
+        <div class="col-md-offset-1  col-md-10">
+           <div class="row center-block">
+
+          <h3 class="panel-title">Why donate today?</h3>
+          <div class="panel-body">
+            <p>Your donation will help us grow OpenStreetMap, the free wiki map of the world. With your donation, we will:</p>
+            <ul>
+              <li>Make sure the OpenStreetMap data and platform is always available for everyone.</li>
+              <li>Support mapping communities around the world.</li>
+              <li>Protect the OpenStreetMap name and and make sure the license is understood and adhered to</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span>60% funding completed</span></div>
+            </div>
+          </div>
+          
+      </div>
+
+      <div class="row center-block" id="donate-options">
+        <div class="col-md-4 col-sm-6 center-block">
+          <button type="button" class="btn btn-lg btn-success donate center-block">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate €10 now
+          </button>
+        </div>
+        <div class="col-md-4 col-sm-6 center-block">
+          <button type="button" class="btn btn-lg btn-success donate center-block">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate €20 now
+          </button>
+        </div>
+        <div class="col-md-4 col-sm-6 center-block">
+          <button type="button" class="btn btn-lg btn-success donate center-block">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate €50 now
+          </button>
+        </div>
+        <div class="col-md-4 col-sm-6 center-block">
+          <button type="button" class="btn btn-lg btn-success donate center-block">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate €100 now
+          </button>
+        </div>
+        <div class="col-md-4 col-sm-6 center-block">
+          <button type="button" class="btn btn-lg btn-success donate center-block">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate €250 now
+          </button>
+        </div>
+        <div class="col-md-4 col-sm-6 center-block">
+          <button type="button" class="btn btn-lg btn-success donate custom center-block">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Donate € <input type="text" name="amount">
+        </div>
+      </div>
+      <hr>
+      <div class="row center-block" id="currency-options">
+        <div class="center-block"><p>Not my currency? </p></div>
+        <div class="btn-group center-block" role="group" aria-label="currency-list">
+          <button type="button" class="btn btn-default">USD</button>
+          <button type="button" class="btn btn-default">GBP</button>
+          <button type="button" class="btn btn-default">CAD</button>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Others
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Currency1</a></li>
+              <li><a href="#">Currency2</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row center-block" id="payment-description">
+        <div class="well">
+          <p>You will be redirected to PayPal to complete your donation. You do not need a PayPal account to make a donation. Your credit card donation will be processed by PayPal. The charge will appear as "OpenStreetMap Foundation" on your credit card statement. Other ways to give, including electronic funds transfer can be <a href="http://wiki.openstreetmap.org/wiki/Donations">found here</a>.</p>
+          <p>OpenStreetMap is supported by the OpenStreetMap Foundation. Questions or comments? Contact the OpenStreetMap Foundation: <a href="mailto:donate@osmfoundation.org">donate@osmfoundation.org</a></p>
+          <p align="center"><img width=100px height=100px src="http://i.imgur.com/bQFkRh6.png"></p>
+        </div>
+      </div> 
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
