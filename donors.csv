@@ -1,4 +1,4 @@
-name,amount,currency,amount_gbp,message,premium
+name,amount,currency,amount_eur,message,premium
 Company name,30000,GBP,25000,,true
 Company,30000,USD,15000,,true
 Another company,15000,USD,5000,,true
