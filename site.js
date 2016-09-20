@@ -61,7 +61,7 @@ function activeTab() {
   });
 }
 
-d3.csv('donors.csv')
+d3.csv('donors-eur.csv')
   .get(function(err, rows) {
     var el = d3.select('#donor-list')
       .selectAll('tr')
