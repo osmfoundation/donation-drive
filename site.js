@@ -39,14 +39,16 @@ function activeTab() {
   if (current) slidecontainer.classed(current[0], false);
 
   switch (tab) {
+  /*
     case 'the-upgrade':
       slidecontainer.classed('active2', true);
     break;
     case 'details':
       slidecontainer.classed('active3', true);
     break;
+ */
     case 'faq':
-      slidecontainer.classed('active4', true);
+      slidecontainer.classed('active2', true);
     break;
     default:
       slidecontainer.classed('active1', true);
