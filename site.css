@@ -112,9 +112,10 @@ body { margin-top:40px; margin-bottom:40px; }
     }
 
 .bg-hardware {
-  background-image:url(img/bg.png);
+  background-image:url(img/bg_6.svg);
   background-repeat:repeat;
-  background-size:200px 200px;
+  background-size:100%;
+  background-attachment: fixed;
   }
 
 /* Components

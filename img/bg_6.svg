@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1045.5" height="1884.8" viewBox="0 0 1045.5 1884.8">
+  <defs>
+    <linearGradient id="a" x1="632" y1="444.13" x2="1044" y2="444.13" gradientTransform="translate(0 0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c8eaa5" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#c8eaa5"/>
+    </linearGradient>
+    <linearGradient id="b" x1="424" y1="516.315" x2="680" y2="516.315" xlink:href="#a"/>
+    <linearGradient id="c" x1="444" y1="968" x2="680" y2="968" xlink:href="#a"/>
+    <linearGradient id="d" x1="0" y1="1098" x2="444" y2="1098" xlink:href="#a"/>
+    <linearGradient id="e" x1="240" y1="1427.77" x2="522.75" y2="1427.77" xlink:href="#a"/>
+    <linearGradient id="f" x1="0" y1="1682.85" x2="261.38" y2="1682.85" xlink:href="#a"/>
+    <linearGradient id="g" y1="1750.165" x2="261.37" y2="1750.165" gradientTransform="translate(0 0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#98bc80" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#98bc80"/>
+    </linearGradient>
+    <linearGradient id="h" x1="0" y1="1345.49" x2="261.38" y2="1345.49" xlink:href="#g"/>
+    <linearGradient id="i" y1="1278.175" x2="261.38" y2="1278.175" gradientTransform="translate(0 0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7fad61" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#7fad61"/>
+    </linearGradient>
+    <linearGradient id="j" x1="522.75" y1="1477.77" x2="648" y2="1477.77" xlink:href="#a"/>
+    <linearGradient id="k" x1="604" y1="1153.145" x2="914.81" y2="1153.145" xlink:href="#a"/>
+    <linearGradient id="l" x1="240" y1="1098" x2="604" y2="1098" gradientTransform="translate(0 0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a0d783" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#a0d783"/>
+    </linearGradient>
+    <linearGradient id="m" x1="648" y1="1480.915" x2="1044" y2="1480.915" xlink:href="#l"/>
+    <linearGradient id="n" x1="261.39" y1="1750.165" x2="776" y2="1750.165" xlink:href="#l"/>
+    <linearGradient id="o" x1="261.38" y1="1682.85" x2="522.75" y2="1682.85" xlink:href="#i"/>
+    <linearGradient id="p" x1="522.75" y1="1741.98" x2="768.22" y2="1741.98" xlink:href="#i"/>
+    <linearGradient id="q" x1="648" y1="1737.89" x2="1044" y2="1737.89" xlink:href="#g"/>
+    <linearGradient id="r" x1="648" y1="1750.165" x2="1044" y2="1750.165" gradientTransform="translate(0 0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#81c157" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#81c157"/>
+    </linearGradient>
+    <linearGradient id="s" x1="240" y1="1427.77" x2="648" y2="1427.77" xlink:href="#l"/>
+    <linearGradient id="t" x1="604" y1="1267.145" x2="914.81" y2="1267.145" xlink:href="#g"/>
+    <linearGradient id="u" x1="240" y1="1264" x2="648" y2="1264" xlink:href="#r"/>
+    <linearGradient id="v" x1="648" y1="1477.77" x2="914.81" y2="1477.77" xlink:href="#r"/>
+    <linearGradient id="w" x1="632" y1="516.315" x2="872" y2="516.315" xlink:href="#i"/>
+    <linearGradient id="x" x1="914.81" y1="1340" x2="1044" y2="1340" xlink:href="#i"/>
+    <linearGradient id="y" x1="872" y1="789.47" x2="1044" y2="789.47" xlink:href="#l"/>
+    <linearGradient id="z" x1="604" y1="968" x2="914.81" y2="968" xlink:href="#g"/>
+    <linearGradient id="aa" x1="680" y1="789.47" x2="914.81" y2="789.47" xlink:href="#r"/>
+    <linearGradient id="ab" x1="914.81" y1="1153.145" x2="1044" y2="1153.145" xlink:href="#g"/>
+    <linearGradient id="ac" x1="872" y1="498.14" x2="1044" y2="498.14" xlink:href="#i"/>
+    <linearGradient id="ad" x1="914.81" y1="906" x2="1044" y2="906" xlink:href="#i"/>
+    <linearGradient id="ae" x1="0" y1="209.155" x2="256" y2="209.155" xlink:href="#a"/>
+    <linearGradient id="af" x1="256" y1="142.315" x2="632" y2="142.315" xlink:href="#a"/>
+    <linearGradient id="ag" x1="256" y1="478.63" x2="632" y2="478.63" xlink:href="#g"/>
+    <linearGradient id="ah" x1="130.69" y1="822" x2="444" y2="822" xlink:href="#a"/>
+    <linearGradient id="ai" x1="130.69" y1="557.035" x2="424" y2="557.035" xlink:href="#l"/>
+    <linearGradient id="aj" x1="0" y1="557.035" x2="150.79" y2="557.035" xlink:href="#g"/>
+    <linearGradient id="ak" x1="0" y1="269.255" x2="150.79" y2="269.255" xlink:href="#i"/>
+    <linearGradient id="al" x1="0" y1="806.975" x2="130.69" y2="806.975" xlink:href="#r"/>
+    <linearGradient id="am" x1="0" y1="885.6" x2="444" y2="885.6" xlink:href="#g"/>
+    <linearGradient id="an" x1="150.79" y1="478.63" x2="424" y2="478.63" xlink:href="#r"/>
+    <linearGradient id="ao" x1="424" y1="822" x2="680" y2="822" xlink:href="#i"/>
+    <linearGradient id="ap" x1="0" y1="134.63" x2="522.75" y2="134.63" xlink:href="#l"/>
+    <linearGradient id="aq" x1="522.75" y1="142.315" x2="812.57" y2="142.315" xlink:href="#i"/>
+    <linearGradient id="ar" x1="632" y1="142.315" x2="1044" y2="142.315" xlink:href="#g"/>
+    <linearGradient id="as" x1="812.57" y1="133.875" x2="1044" y2="133.875" xlink:href="#r"/>
+  </defs>
+  <title>bg_6</title>
+  <polyline points="1044 269.32 1045.5 269.26 1044 267.75" fill="none" opacity="0.4"/>
+  <polyline points="1044 1883.78 1045.5 1884.8 784.12 1884.8 784.11 1884.79" fill="none" opacity="0.4"/>
+  <line x1="261.38" y1="1884.8" x2="261.38" y2="1884.79" fill="none" opacity="0.4"/>
+  <line x1="1045.5" y1="269.26" x2="1044" y2="272.28" fill="none" opacity="0.4"/>
+  <polygon points="1044 269.32 1044 272.28 872 618.94 632 284.63 1044 269.32" opacity="0.4" fill="url(#a)"/>
+  <polygon points="680 748 424 688 632 284.63 680 748" opacity="0.4" fill="url(#b)"/>
+  <polygon points="680 748 604 1188 444 956 680 748" opacity="0.4" fill="url(#c)"/>
+  <polygon points="444 956 240 1240 0 1075.44 444 956" opacity="0.4" fill="url(#d)"/>
+  <polygon points="522.75 1615.54 261.38 1480.91 240 1240 522.75 1615.54" opacity="0.4" fill="url(#e)"/>
+  <polygon points="261.38 1480.91 261.38 1884.79 261.37 1884.79 0 1615.54 261.38 1480.91" opacity="0.4" fill="url(#f)"/>
+  <polygon points="261.37 1884.79 0 1884.79 0 1615.54 261.37 1884.79" opacity="0.4" fill="url(#g)"/>
+  <polygon points="261.38 1480.91 0 1615.54 0 1075.44 261.38 1480.91" opacity="0.4" fill="url(#h)"/>
+  <polygon points="261.38 1480.91 0 1075.44 240 1240 261.38 1480.91" opacity="0.4" fill="url(#i)"/>
+  <polygon points="648 1340 648 1615.54 522.75 1615.54 648 1340" opacity="0.4" fill="url(#j)"/>
+  <polygon points="914.81 960 914.81 1346.29 604 1188 914.81 960" opacity="0.4" fill="url(#k)"/>
+  <polygon points="604 1188 240 1240 444 956 604 1188" opacity="0.4" fill="url(#l)"/>
+  <polygon points="1044 1592 648 1615.54 914.81 1346.29 1044 1592" opacity="0.4" fill="url(#m)"/>
+  <polygon points="776 1884.79 261.39 1884.79 522.75 1615.54 768.22 1868.42 776 1884.79" opacity="0.4" fill="url(#n)"/>
+  <polygon points="522.75 1615.54 261.39 1884.79 261.38 1884.79 261.38 1480.91 522.75 1615.54" opacity="0.4" fill="url(#o)"/>
+  <polygon points="768.22 1868.42 522.75 1615.54 648 1615.54 768.22 1868.42" opacity="0.4" fill="url(#p)"/>
+  <polygon points="1044 1592 1044 1883.78 648 1615.54 1044 1592" opacity="0.4" fill="url(#q)"/>
+  <polygon points="1044 1883.78 1044 1884.79 784.11 1884.79 768.22 1868.42 648 1615.54 1044 1883.78" opacity="0.4" fill="url(#r)"/>
+  <polygon points="784.11 1884.79 776 1884.79 768.22 1868.42 784.11 1884.79" fill="none" opacity="0.4"/>
+  <polygon points="648 1340 522.75 1615.54 240 1240 648 1340" opacity="0.4" fill="url(#s)"/>
+  <polygon points="914.81 1346.29 648 1340 604 1188 914.81 1346.29" opacity="0.4" fill="url(#t)"/>
+  <polygon points="648 1340 240 1240 604 1188 648 1340" opacity="0.4" fill="url(#u)"/>
+  <polygon points="914.81 1346.29 648 1615.54 648 1340 914.81 1346.29" opacity="0.4" fill="url(#v)"/>
+  <polygon points="872 618.94 680 748 632 284.63 872 618.94" opacity="0.4" fill="url(#w)"/>
+  <polygon points="1044 1088 1044 1592 914.81 1346.29 1044 1088" opacity="0.4" fill="url(#x)"/>
+  <polygon points="1044 724 914.81 960 872 618.94 1044 724" opacity="0.4" fill="url(#y)"/>
+  <polygon points="914.81 960 604 1188 680 748 914.81 960" opacity="0.4" fill="url(#z)"/>
+  <polygon points="914.81 960 680 748 872 618.94 914.81 960" opacity="0.4" fill="url(#aa)"/>
+  <polygon points="1044 1088 914.81 1346.29 914.81 960 1044 1088" opacity="0.4" fill="url(#ab)"/>
+  <polygon points="1044 272.28 1044 724 872 618.94 1044 272.28" opacity="0.4" fill="url(#ac)"/>
+  <polygon points="1044 724 1044 1088 914.81 960 1044 724" opacity="0.4" fill="url(#ad)"/>
+  <polygon points="256 269.26 150.79 418.31 0 0 256 269.26" opacity="0.4" fill="url(#ae)"/>
+  <polygon points="632 284.63 256 269.26 522.75 0 632 284.63" opacity="0.4" fill="url(#af)"/>
+  <polygon points="632 284.63 424 688 256 269.26 632 284.63" opacity="0.4" fill="url(#ag)"/>
+  <polyline points="424 688 444 956 130.69 695.76" opacity="0.4" fill="url(#ah)"/>
+  <polyline points="130.69 695.76 150.79 418.31 424 688" opacity="0.4" fill="url(#ai)"/>
+  <polygon points="150.79 418.31 130.69 695.76 0 538.51 150.79 418.31" opacity="0.4" fill="url(#aj)"/>
+  <polygon points="150.79 418.31 0 538.51 0 0 150.79 418.31" opacity="0.4" fill="url(#ak)"/>
+  <polygon points="130.69 695.76 0 1075.44 0 538.51 130.69 695.76" opacity="0.4" fill="url(#al)"/>
+  <polygon points="444 956 0 1075.44 130.69 695.76 444 956" opacity="0.4" fill="url(#am)"/>
+  <polygon points="424 688 150.79 418.31 256 269.26 424 688" opacity="0.4" fill="url(#an)"/>
+  <polygon points="680 748 444 956 424 688 680 748" opacity="0.4" fill="url(#ao)"/>
+  <polygon points="522.75 0 256 269.26 0 0 522.75 0" opacity="0.4" fill="url(#ap)"/>
+  <polygon points="812.57 0 632 284.63 522.75 0 812.57 0" opacity="0.4" fill="url(#aq)"/>
+  <polygon points="1044 267.75 1044 269.32 632 284.63 812.57 0 1044 267.75" opacity="0.4" fill="url(#ar)"/>
+  <polygon points="1044 0 1044 267.75 812.57 0 1044 0" opacity="0.4" fill="url(#as)"/>
+</svg>
