@@ -1,4 +1,4 @@
-<?
+<?php
 /* Paypal Submission
 // FIXME add paypal language support
 lc = AU, DE FR IT GB ES US

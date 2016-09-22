@@ -1,4 +1,4 @@
-<?
+<?php
 //CONNECT to DB
 include('../htdocs/process/db-connect.inc.php');
 

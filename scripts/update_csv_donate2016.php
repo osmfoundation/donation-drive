@@ -1,4 +1,4 @@
-<?
+<?php
 //CONNECT to DB
 include('db-connect.inc.php');
 

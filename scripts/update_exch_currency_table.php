@@ -1,4 +1,4 @@
-<?
+<?php
 /*
 	Update Currency Exchange Rate Table
 

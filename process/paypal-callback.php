@@ -1,4 +1,4 @@
-<?
+<?php
 // Extensively based on Very_Horrible Paypal sample code.
 
 ob_start();
