@@ -27,7 +27,7 @@ if ($sql_result AND mysql_num_rows($sql_result)>0) {
     $name = $contrib['anonymous'] ? 'Anonymous' : $contrib['name'];
     // CSV looks like this:
     // name:str, amount:float, currency:str, amount_gbp:float, message:str, premium:bool
-    fputcsv($fp, array($name, $contrib['amount'], $contrib['currency'], number_format(($contrib['amount_gbp'] / 1.17987), 2, '.', ''), $contrib['comment'], '')) OR die('FAILED writing row');
+    fputcsv($fp, array($name, $contrib['amount'], $contrib['currency'], number_format(($contrib['amount_gbp'] * 1.17987), 2, '.', ''), $contrib['comment'], '')) OR die('FAILED writing row');
   }
 }
 fclose($fp);
