@@ -1,0 +1,2 @@
+# Ensure all requests here are rejected.
+Deny from all
