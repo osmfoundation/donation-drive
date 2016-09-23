@@ -1,4 +1,4 @@
-var goal = 60000; // Target value to be raised.
+var goal = 70000; // Target value to be raised.
 
 // Helper function: Add commas to longer integers.
 function commaNum(x) {
