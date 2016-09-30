@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+  <title>twitter</title>
+  <rect width="640" height="265" fill="#595959"/>
+  <polygon points="640 156.537 364.262 71.61 362.312 77.942 317.934 64.274 309.484 91.708 284.816 84.11 251.554 192.104 278.083 200.275 277.554 201.994 632.738 311.39 640 287.812 640 156.537" fill="#4c4c4c"/>
+  <path d="M393.014,109.726a39.57,39.57,0,1,1-39.571-39.571,39.57,39.57,0,0,1,39.571,39.571" fill="#fff"/>
+  <path d="M248.736,62.242,260.912,94.2l-12.176,31.96,12.176,31.96-12.176,31.96,7.477,2.855,40.616-40.6,7.286,1.122,8.846-8.846A53.787,53.787,0,0,1,301.7,123.385l4.147-3.4a48.6,48.6,0,0,1,22.277-51.841l-15.467-5.9L280.7,74.418Z" fill="#a2e99f"/>
+  <path d="M384.568,147.146a48.485,48.485,0,0,1-41.377,10.178l-3.4,4.147a53.76,53.76,0,0,1-20.317-10.464l-9.151,9.17,1.122,6.772L277.405,201l3.291,1.255,31.96-12.174,31.96,12.174,31.96-12.174,12.176-31.96-4.185-10.977Z" fill="#a2e99f"/>
+  <path d="M384.568,147.146a48.485,48.485,0,0,1-41.377,10.178l-3.4,4.147-20.349-10.724-9.119,9.43,1.122,6.772,33.246,5.008-.069,30.3,31.96-12.174,12.176-31.96Z" fill="#6ecc8e"/>
+  <path d="M342.666,93.178c-6.733,0-11.11,6.733-11.11,13.467,0,10.1,11.11,20.2,21.21,26.933,10.1-6.733,21.21-16.833,21.21-26.933,0-6.733-4.377-13.467-11.11-13.467s-10.1,4.522-10.1,10.1C352.766,97.7,349.4,93.178,342.666,93.178Z" fill="#ff5079"/>
+  <rect y="264" width="640" height="71" fill="#76ba4a"/>
+  <rect y="335" width="640" height="145" fill="#cde099"/>
+  <g>
+    <rect y="363.4" width="14" height="3" fill="#ff5079"/>
+    <rect y="391.8" width="14" height="3" fill="#595959"/>
+    <rect y="420.2" width="14" height="3" fill="#595959"/>
+    <rect y="448.6" width="14" height="3" fill="#595959"/>
+  </g>
+  <g>
+    <rect x="626" y="363.4" width="14" height="3" fill="#ff5079"/>
+    <rect x="626" y="391.8" width="14" height="3" fill="#595959"/>
+    <rect x="626" y="420.2" width="14" height="3" fill="#595959"/>
+    <rect x="626" y="448.6" width="14" height="3" fill="#595959"/>
+  </g>
+  <text transform="translate(228.555 405.266)" font-size="40" fill="#595959" font-family="Futura-CondensedMedium, Futura">Dona<tspan x="65.996" y="0" letter-spacing="-0.001em">t</tspan><tspan x="74.844" y="0">e </tspan><tspan x="97.871" y="0" letter-spacing="-0.029em">T</tspan><tspan x="109.785" y="0">od</tspan><tspan x="140.977" y="0" letter-spacing="0.006em">a</tspan><tspan x="156.992" y="0">y!</tspan></text>
+  <text transform="translate(163.491 440.108)" font-size="20" fill="#595959" font-family="OpenSans, Open Sans">Support a growing OpeStreetMap</text>
+  <text transform="translate(99.297 310.56)" font-size="25" fill="#fff" font-family="OpenSans-Bold, Open Sans" font-weight="700">OpenStreetMap Funding Drive<tspan x="377.832" y="0" xml:space="preserve" fill="#4c4c4c"> 2016</tspan></text>
+</svg>
