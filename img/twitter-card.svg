@@ -1,27 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
-  <title>twitter</title>
-  <rect width="640" height="265" fill="#595959"/>
-  <polygon points="640 156.537 364.262 71.61 362.312 77.942 317.934 64.274 309.484 91.708 284.816 84.11 251.554 192.104 278.083 200.275 277.554 201.994 632.738 311.39 640 287.812 640 156.537" fill="#4c4c4c"/>
-  <path d="M393.014,109.726a39.57,39.57,0,1,1-39.571-39.571,39.57,39.57,0,0,1,39.571,39.571" fill="#fff"/>
-  <path d="M248.736,62.242,260.912,94.2l-12.176,31.96,12.176,31.96-12.176,31.96,7.477,2.855,40.616-40.6,7.286,1.122,8.846-8.846A53.787,53.787,0,0,1,301.7,123.385l4.147-3.4a48.6,48.6,0,0,1,22.277-51.841l-15.467-5.9L280.7,74.418Z" fill="#a2e99f"/>
-  <path d="M384.568,147.146a48.485,48.485,0,0,1-41.377,10.178l-3.4,4.147a53.76,53.76,0,0,1-20.317-10.464l-9.151,9.17,1.122,6.772L277.405,201l3.291,1.255,31.96-12.174,31.96,12.174,31.96-12.174,12.176-31.96-4.185-10.977Z" fill="#a2e99f"/>
-  <path d="M384.568,147.146a48.485,48.485,0,0,1-41.377,10.178l-3.4,4.147-20.349-10.724-9.119,9.43,1.122,6.772,33.246,5.008-.069,30.3,31.96-12.174,12.176-31.96Z" fill="#6ecc8e"/>
-  <path d="M342.666,93.178c-6.733,0-11.11,6.733-11.11,13.467,0,10.1,11.11,20.2,21.21,26.933,10.1-6.733,21.21-16.833,21.21-26.933,0-6.733-4.377-13.467-11.11-13.467s-10.1,4.522-10.1,10.1C352.766,97.7,349.4,93.178,342.666,93.178Z" fill="#ff5079"/>
-  <rect y="264" width="640" height="71" fill="#76ba4a"/>
-  <rect y="335" width="640" height="145" fill="#cde099"/>
-  <g>
-    <rect y="363.4" width="14" height="3" fill="#ff5079"/>
-    <rect y="391.8" width="14" height="3" fill="#595959"/>
-    <rect y="420.2" width="14" height="3" fill="#595959"/>
-    <rect y="448.6" width="14" height="3" fill="#595959"/>
-  </g>
-  <g>
-    <rect x="626" y="363.4" width="14" height="3" fill="#ff5079"/>
-    <rect x="626" y="391.8" width="14" height="3" fill="#595959"/>
-    <rect x="626" y="420.2" width="14" height="3" fill="#595959"/>
-    <rect x="626" y="448.6" width="14" height="3" fill="#595959"/>
-  </g>
-  <text transform="translate(228.555 405.266)" font-size="40" fill="#595959" font-family="Futura-CondensedMedium, Futura">Dona<tspan x="65.996" y="0" letter-spacing="-0.001em">t</tspan><tspan x="74.844" y="0">e </tspan><tspan x="97.871" y="0" letter-spacing="-0.029em">T</tspan><tspan x="109.785" y="0">od</tspan><tspan x="140.977" y="0" letter-spacing="0.006em">a</tspan><tspan x="156.992" y="0">y!</tspan></text>
-  <text transform="translate(163.491 440.108)" font-size="20" fill="#595959" font-family="OpenSans, Open Sans">Support a growing OpeStreetMap</text>
-  <text transform="translate(99.297 310.56)" font-size="25" fill="#fff" font-family="OpenSans-Bold, Open Sans" font-weight="700">OpenStreetMap Funding Drive<tspan x="377.832" y="0" xml:space="preserve" fill="#4c4c4c"> 2016</tspan></text>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="640px" height="480px" viewBox="0 0 640 480" style="enable-background:new 0 0 640 480;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#595959;}
+	.st1{fill:#4C4C4C;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:#A2E99F;}
+	.st4{fill:#6ECC8E;}
+	.st5{fill:#FF5079;}
+	.st6{fill:#76BA4A;}
+	.st7{fill:#CDE099;}
+	.st8{font-family:'PTSans-Regular';}
+	.st9{font-size:20px;}
+	.st10{font-family:'PTSans-Bold';}
+	.st11{font-size:30px;}
+	.st12{font-family:'PTSans-Narrow';}
+	.st13{font-size:40px;}
+</style>
+<title>twitter</title>
+<rect class="st0" width="640" height="265"/>
+<polygon class="st1" points="640,156.5 364.3,71.6 362.3,77.9 317.9,64.3 309.5,91.7 284.8,84.1 251.6,192.1 278.1,200.3 277.6,202 
+	632.7,311.4 640,287.8 "/>
+<path class="st2" d="M393,109.7c0,21.9-17.7,39.6-39.6,39.6c-21.9,0-39.6-17.7-39.6-39.6c0-21.9,17.7-39.6,39.6-39.6
+	C375.3,70.2,393,87.9,393,109.7C393,109.7,393,109.7,393,109.7"/>
+<path class="st3" d="M248.7,62.2l12.2,32l-12.2,32l12.2,32l-12.2,32l7.5,2.9l40.6-40.6l7.3,1.1l8.8-8.8c-5.3-6.1-9.2-13.4-11.3-21.2
+	l4.1-3.4c-4.4-20.3,4.6-41.1,22.3-51.8l-15.5-5.9l-32,12.2L248.7,62.2z"/>
+<path class="st3" d="M384.6,147.1c-11.5,9.6-26.8,13.4-41.4,10.2l-3.4,4.1c-7.4-2-14.4-5.6-20.3-10.5l-9.2,9.2l1.1,6.8l-34,34.1
+	l3.3,1.3l32-12.2l32,12.2l32-12.2l12.2-32L384.6,147.1L384.6,147.1z"/>
+<path class="st4" d="M384.6,147.1c-11.5,9.6-26.8,13.4-41.4,10.2l-3.4,4.1l-20.3-10.7l-9.1,9.4l1.1,6.8l33.2,5l-0.1,30.3l32-12.2
+	l12.2-32L384.6,147.1z"/>
+<path class="st5" d="M342.7,93.2c-6.7,0-11.1,6.7-11.1,13.5c0,10.1,11.1,20.2,21.2,26.9c10.1-6.7,21.2-16.8,21.2-26.9
+	c0-6.7-4.4-13.5-11.1-13.5s-10.1,4.5-10.1,10.1C352.8,97.7,349.4,93.2,342.7,93.2z"/>
+<rect y="264" class="st6" width="640" height="71"/>
+<rect y="335" class="st7" width="640" height="145"/>
+<g>
+	<rect y="363.4" class="st5" width="14" height="3"/>
+	<rect y="391.8" class="st0" width="14" height="3"/>
+	<rect y="420.2" class="st0" width="14" height="3"/>
+	<rect y="448.6" class="st0" width="14" height="3"/>
+</g>
+<g>
+	<rect x="626" y="363.4" class="st5" width="14" height="3"/>
+	<rect x="626" y="391.8" class="st0" width="14" height="3"/>
+	<rect x="626" y="420.2" class="st0" width="14" height="3"/>
+	<rect x="626" y="448.6" class="st0" width="14" height="3"/>
+</g>
+<text transform="matrix(1 0 0 1 177.0222 444.108)" class="st0 st8 st9">Support a growing OpeStreetMap</text>
+<text transform="matrix(1 0 0 1 83.7701 312.1552)" class="st2 st10 st11">OpenStreetMap Funding Drive</text>
+<text transform="matrix(1 0 0 1 480.6021 312.1557)" class="st1 st10 st11"> 2016</text>
+<text transform="matrix(1 0 0 1 219.3818 403.065)" class="st12 st13">Donate Today!</text>
 </svg>
