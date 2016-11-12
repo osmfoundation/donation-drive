@@ -13,7 +13,7 @@ $sql_query_comments = 'SELECT * FROM `donations` WHERE `processed` = 1 AND `targ
 $sql_result = mysql_query($sql_query_comments, $_DB_H) OR die('FAIL UPDATING: '.$sql_query_comments);
 $fp = fopen('../data/donors-eur.csv', 'w');
 $count=0;
-fputcsv($fp, array('name','amount','currency','amount_eur','message','premium')) OR die('FAILED writing header.');
+fputcsv($fp, array('name','amount','currency','amount_eur','message','premium', 'timestamp')) OR die('FAILED writing header.');
 
 $randval = mt_rand(0, 1);
 
@@ -26,7 +26,7 @@ $sql_matching_result = mysql_query($sql_query_matching_comments, $_DB_H) OR die(
 $contrib_matching = mysql_fetch_array($sql_matching_result ,MYSQL_ASSOC)  OR die('FAIL RESULT: '.$sql_query_matching_comments);
 $contrib_matching_amount_eur = $contrib_matching['amount_for_matching_gbp'] * 1.17987;
 if ($contrib_matching_amount_eur > 10000) $contrib_matching_amount_eur = 10000;
-fputcsv($fp, array('Mapbox',number_format($contrib_matching_amount_eur, 2, '.', ''),'EUR',number_format($contrib_matching_amount_eur, 2, '.', ''),'Mapbox matched donations','true')) OR die('FAILED writing first partner line.');
+fputcsv($fp, array('Mapbox',number_format($contrib_matching_amount_eur, 2, '.', ''),'EUR',number_format($contrib_matching_amount_eur, 2, '.', ''),'Mapbox matched donations','true', date('Y-m-d H:i:s'))) OR die('FAILED writing first partner line.');
 
 if ($sql_result AND mysql_num_rows($sql_result)>0) {
   while($contrib = mysql_fetch_array($sql_result ,MYSQL_ASSOC)) {
@@ -34,7 +34,7 @@ if ($sql_result AND mysql_num_rows($sql_result)>0) {
     $name = $contrib['anonymous'] ? 'Anonymous' : $contrib['name'];
     // CSV looks like this:
     // name:str, amount:float, currency:str, amount_gbp:float, message:str, premium:bool
-    fputcsv($fp, array($name, $contrib['amount'], $contrib['currency'], number_format(($contrib['amount_gbp'] * 1.17987), 2, '.', ''), $contrib['comment'], '')) OR die('FAILED writing row');
+    fputcsv($fp, array($name, $contrib['amount'], $contrib['currency'], number_format(($contrib['amount_gbp'] * 1.17987), 2, '.', ''), $contrib['comment'], '', $contrib['timestamp'])) OR die('FAILED writing row');
   }
 }
 fclose($fp);
