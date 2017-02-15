@@ -7,6 +7,7 @@ lc = AU, DE FR IT GB ES US
 ob_start();
 
 //CONNECT to DB
+include('../scripts/fix_mysql.inc.php');
 include('../scripts/db-connect.inc.php');
 
 $data = array();

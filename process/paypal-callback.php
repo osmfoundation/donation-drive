@@ -82,6 +82,7 @@ $full_name			= $first_name.' '.$last_name;
 			// process payment
 
 			//CONNECT to DB
+                        include('../scripts/fix_mysql.inc.php');
 			include('../scripts/db-connect.inc.php');
 
 			if ($payment_status == 'Completed' AND $option_name1=='contribution_tracking_id' AND $business == 'treasurer@openstreetmap.org') {

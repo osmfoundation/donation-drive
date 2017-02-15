@@ -1,6 +1,7 @@
 <?php
 //CONNECT to DB
-include('../htdocs/process/db-connect.inc.php');
+include('fix_mysql.inc.php');
+include('db-connect.inc.php');
 
 function make_seed()
 {
