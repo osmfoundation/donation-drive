@@ -19,7 +19,8 @@ $data['currency']		= $_POST['currency_code'];
 $data['target']		= $_POST['target'];
 if (empty($data['target'])) $data['target'] = 'default';
 
-$sql_insert =	'INSERT INTO `donations` (`amount`,`currency`,`anonymous`,`comment`,`target`) VALUES (\''.
+$sql_insert =	'INSERT INTO `donations` (`amount_gbp`,`amount`,`currency`,`anonymous`,`comment`,`target`) VALUES (\''.
+					'0'.'\',\''.
 					$_DB_H->real_escape_string($data['amount']).'\',\''.
 					$_DB_H->real_escape_string($data['currency']).'\',\''.
 					$_DB_H->real_escape_string($data['anonymous']).'\',\''.
