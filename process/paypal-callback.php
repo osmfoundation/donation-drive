@@ -49,27 +49,27 @@ if( !($res = curl_exec($ch)) ) {
 curl_close($ch);
 
 // assign posted variables to local variables
-$item_name			= get_magic_quotes_gpc() ? stripslashes($_REQUEST['item_name'])		: $_REQUEST['item_name'] ;
-$item_number		= get_magic_quotes_gpc() ? stripslashes($_REQUEST['item_number'])		: $_REQUEST['item_number'];
-$payment_status		= get_magic_quotes_gpc() ? stripslashes($_REQUEST['payment_status'])	: $_REQUEST['payment_status'];
-$payment_amount		= get_magic_quotes_gpc() ? stripslashes($_REQUEST['mc_gross'])			: $_REQUEST['mc_gross'];
-$payment_currency	= get_magic_quotes_gpc() ? stripslashes($_REQUEST['mc_currency'])		: $_REQUEST['mc_currency'];
-$txn_id				= get_magic_quotes_gpc() ? stripslashes($_REQUEST['txn_id'])			: $_REQUEST['txn_id'];
-$receiver_email		= get_magic_quotes_gpc() ? stripslashes($_REQUEST['receiver_email'])	: $_REQUEST['receiver_email'];
-$payer_email		= get_magic_quotes_gpc() ? stripslashes($_REQUEST['payer_email'])		: $_REQUEST['payer_email'];
-$business			= get_magic_quotes_gpc() ? stripslashes($_REQUEST['business'])			: $_REQUEST['business'];
-$option_selection1	= get_magic_quotes_gpc() ? stripslashes($_REQUEST['option_selection1']) : $_REQUEST['option_selection1'];
-$option_name1		= get_magic_quotes_gpc() ? stripslashes($_REQUEST['option_name1'])		 : $_REQUEST['option_name1'];
+$item_name			= $_POST['item_name'] ;
+$item_number		= $_POST['item_number'];
+$payment_status		= $_POST['payment_status'];
+$payment_amount		= $_POST['mc_gross'];
+$payment_currency	= $_POST['mc_currency'];
+$txn_id				= $_POST['txn_id'];
+$receiver_email		= $_POST['receiver_email'];
+$payer_email		= $_POST['payer_email'];
+$business			= $_POST['business'];
+$option_selection1	= $_POST['option_selection1'];
+$option_name1		= $_POST['option_name1'];
 
-$first_name			= get_magic_quotes_gpc() ? stripslashes($_REQUEST['first_name'])		 : $_REQUEST['first_name'];
-$last_name			= get_magic_quotes_gpc() ? stripslashes($_REQUEST['last_name'])		 : $_REQUEST['last_name'];
+$first_name			= $_POST['first_name'];
+$last_name			= $_POST['last_name'];
 
 $full_name			= $first_name.' '.$last_name;
 
 
 //if (!$fp) {
 //	// HTTP ERROR
-//	error_log('Verify Failed Callback: '.var_export($_REQUEST, TRUE));
+//	error_log('Verify Failed Callback: '.var_export($_POST, TRUE));
 //} else {
 //	fputs ($fp, $header . $req);
 //	while (!feof($fp)) {
@@ -82,7 +82,7 @@ $full_name			= $first_name.' '.$last_name;
 			// process payment
 
 			//CONNECT to DB
-                        include('../scripts/fix_mysql.inc.php');
+      include('../scripts/fix_mysql.inc.php');
 			include('../scripts/db-connect.inc.php');
 
 			if ($payment_status == 'Completed' AND $option_name1=='contribution_tracking_id' AND $business == 'treasurer@openstreetmap.org') {
@@ -93,7 +93,7 @@ $full_name			= $first_name.' '.$last_name;
 					$sql_query_exc_rate = 'SELECT `rate` FROM `currency_rates` WHERE `currency`="'.$payment_currency.'" LIMIT 1';
 					$sql_result = mysql_query($sql_query_exc_rate, $_DB_H) OR error_log('FAIL UPDATING: '.$sql_query_exc_rate);
 					if ($sql_result AND mysql_num_rows($sql_result)==1) {
-						$exc_rate = mysql_fetch_array($sql_result ,MYSQL_ASSOC);
+						$exc_rate = mysql_fetch_array($sql_result);
 						$payment_amount_gbp = $payment_amount / $exc_rate['rate'];
 					}
 				}
@@ -109,12 +109,12 @@ $full_name			= $first_name.' '.$last_name;
 									mysql_real_escape_string($payment_currency, $_DB_H).'\',\''.
 									mysql_real_escape_string($payment_status, $_DB_H).'\',\''.
 									mysql_real_escape_string($option_selection1, $_DB_H).'\',\''.
-									mysql_real_escape_string(serialize($_REQUEST), $_DB_H).
+									mysql_real_escape_string(serialize($_POST), $_DB_H).
 									'\')';
 			mysql_query($sql_insert_callback, $_DB_H) OR error_log('SQL FAIL: '.$sql_insert_callback);
 		} else if (strcmp ($res, 'INVALID') == 0) {
 			// log for manual investigation
-			error_log('Invalid Callback: '.var_export($_REQUEST, TRUE));
+			error_log('Invalid Callback: '.var_export($_POST, TRUE));
 		}
 //	}
 //	fclose ($fp);

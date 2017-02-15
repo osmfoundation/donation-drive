@@ -11,15 +11,14 @@ include('../scripts/fix_mysql.inc.php');
 include('../scripts/db-connect.inc.php');
 
 $data = array();
-$data['comment']		= (get_magic_quotes_gpc() ? stripslashes($_POST['comment'])			: $_POST['comment']			);
-$data['comment-option']	= (get_magic_quotes_gpc() ? stripslashes($_POST['comment-option'])	: $_POST['comment-option']	);
+$data['comment']		= $_POST['comment'];
+$data['comment-option']	= $_POST['comment-option'];
 $data['anonymous'] 		= ($data['comment-option'] == 'comment' ? '0' : '1');
-$data['amount']			= (get_magic_quotes_gpc() ? stripslashes($_POST['amountGiven'])		: $_POST['amountGiven']		);
-$data['currency']		= (get_magic_quotes_gpc() ? stripslashes($_POST['currency_code'])	: $_POST['currency_code']	);
+$data['amount']			= $_POST['amountGiven'];
+$data['currency']		= $_POST['currency_code'];
 
-$data['target']		= (get_magic_quotes_gpc() ? stripslashes($_POST['target'])	: $_POST['target']	);
+$data['target']		= $_POST['target'];
 if (empty($data['target'])) $data['target'] = 'default';
-
 
 $sql_insert =	'INSERT INTO `donations` (`amount`,`currency`,`anonymous`,`comment`,`target`) VALUES (\''.
 					mysql_real_escape_string($data['amount'],		$_DB_H).'\',\''.

@@ -23,7 +23,7 @@ fputcsv($fp, array($launch_partners[$randval][0],'20000','USD','13046.19',$launc
 fputcsv($fp, array($launch_partners[1-$randval][0],'20000','USD','13046.19',$launch_partners[1-$randval][1],'true')) OR die('FAILED writing second partner line.');
 
 if ($sql_result AND mysql_num_rows($sql_result)>0) {
-  while($contrib = mysql_fetch_array($sql_result ,MYSQL_ASSOC)) {
+  while($contrib = mysql_fetch_array($sql_result)) {
     $count++;
     $name = $contrib['anonymous'] ? 'Anonymous' : $contrib['name'];
     // CSV looks like this:
@@ -32,4 +32,3 @@ if ($sql_result AND mysql_num_rows($sql_result)>0) {
   }
 }
 fclose($fp);
-?>
