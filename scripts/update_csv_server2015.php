@@ -1,6 +1,5 @@
 <?php
 //CONNECT to DB
-include('fix_mysql.inc.php');
 include('db-connect.inc.php');
 
 function make_seed()
@@ -11,7 +10,7 @@ function make_seed()
 mt_srand(make_seed());
 
 $sql_query_comments = 'SELECT * FROM `donations` WHERE `processed` = 1 AND `target` = "server2015" ORDER BY timestamp desc';
-$sql_result = mysql_query($sql_query_comments, $_DB_H) OR die('FAIL UPDATING: '.$sql_query_comments);
+$sql_result = $_DB_H->query($sql_query_comments) OR die('FAIL UPDATING: '.$sql_query_comments);
 $fp = fopen('../data/donors.csv', 'w');
 $count=0;
 fputcsv($fp, array('name','amount','currency','amount_gbp','message','premium')) OR die('FAILED writing header.');
@@ -22,8 +21,8 @@ $launch_partners = array(array('Mapbox','It\'s a pleasure to chip in for this fu
 fputcsv($fp, array($launch_partners[$randval][0],'20000','USD','13046.19',$launch_partners[$randval][1],'true')) OR die('FAILED writing first partner line.');
 fputcsv($fp, array($launch_partners[1-$randval][0],'20000','USD','13046.19',$launch_partners[1-$randval][1],'true')) OR die('FAILED writing second partner line.');
 
-if ($sql_result AND mysql_num_rows($sql_result)>0) {
-  while($contrib = mysql_fetch_array($sql_result)) {
+if ($sql_result AND $sql_result->num_rows > 0) {
+  while($contrib = $sql_result->fetch_assoc()) {
     $count++;
     $name = $contrib['anonymous'] ? 'Anonymous' : $contrib['name'];
     // CSV looks like this:

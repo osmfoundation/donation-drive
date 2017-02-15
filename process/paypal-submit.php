@@ -7,7 +7,6 @@ lc = AU, DE FR IT GB ES US
 ob_start();
 
 //CONNECT to DB
-include('../scripts/fix_mysql.inc.php');
 include('../scripts/db-connect.inc.php');
 
 $data = array();
@@ -21,14 +20,16 @@ $data['target']		= $_POST['target'];
 if (empty($data['target'])) $data['target'] = 'default';
 
 $sql_insert =	'INSERT INTO `donations` (`amount`,`currency`,`anonymous`,`comment`,`target`) VALUES (\''.
-					mysql_real_escape_string($data['amount'],		$_DB_H).'\',\''.
-					mysql_real_escape_string($data['currency'],		$_DB_H).'\',\''.
-					mysql_real_escape_string($data['anonymous'],	$_DB_H).'\',\''.
-					mysql_real_escape_string($data['comment'],		$_DB_H).'\',\''.
-					mysql_real_escape_string($data['target'],		$_DB_H).
+					$_DB_H->real_escape_string($data['amount']).'\',\''.
+					$_DB_H->real_escape_string($data['currency']).'\',\''.
+					$_DB_H->real_escape_string($data['anonymous']).'\',\''.
+					$_DB_H->real_escape_string($data['comment']).'\',\''.
+					$_DB_H->real_escape_string($data['target']).
 				'\')';
-$sql_insert_result = mysql_query($sql_insert, $_DB_H) OR error_log('SQL FAIL: '.$sql_insert);
-$sql_insert_id = mysql_insert_id($_DB_H);
+$sql_insert_result = $_DB_H->query($sql_insert) OR error_log('SQL FAIL: '.$sql_insert);
+$sql_insert_id = $_DB_H->insert_id;
+
+if (!$sql_insert_id) die('Error creating donation tracking ID');
 
 $_PAYPAL_URL = 'https://www.paypal.com/cgi-bin/webscr';
 
