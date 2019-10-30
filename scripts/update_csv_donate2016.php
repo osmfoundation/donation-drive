@@ -9,7 +9,7 @@ function make_seed()
 }
 mt_srand(make_seed());
 
-$sql_query_comments = 'SELECT * FROM `donations` WHERE `processed` = 1 AND `target` = "donate2016" ORDER BY timestamp desc';
+$sql_query_comments = 'SELECT * FROM `donations` WHERE `processed` = 1 AND `target` = "donate2016" AND timestamp >= date_sub(now(), interval 13 month) ORDER BY timestamp desc';
 $sql_result = $_DB_H->query($sql_query_comments) OR die('FAIL UPDATING: '.$sql_query_comments);
 $fp = fopen('../data/donors-eur.csv', 'w');
 $count=0;

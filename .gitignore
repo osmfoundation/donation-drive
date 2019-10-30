@@ -1,2 +1,4 @@
 *~
 _site/
+data/
+scripts/db-connect.inc.php
