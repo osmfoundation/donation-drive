@@ -137,26 +137,33 @@
    height="3"
    id="rect413" />
 </g>
-<text
-   class="st0 st8 st9"
-   id="text417"
-   x="171.74037"
-   y="444.108"><tspan
-     id="tspan34"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'PT Sans';-inkscape-font-specification:'PT Sans'">Support a growing OpenStreetMap</tspan></text>
+<g
+   transform="translate(40.467872,0.75821191)"
+   id="g37"><g
+     id="g33"><g
+       style="stroke-width:1.20876"
+       transform="matrix(0.82729226,0,0,0.82729226,55.266477,75.050278)"
+       id="g40"><text
+         style="stroke-width:1.20876"
+         y="440.06833"
+         x="-3.7353516"
+         id="text417"
+         class="st0 st8 st9"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'PT Sans';-inkscape-font-specification:'PT Sans'"
+           id="tspan37">Support a growing OpenStreetMap at donate.openstreetmap.org</tspan></text></g></g></g>
 <text
    class="st2 st10 st11"
    id="text419"
    x="126.15545"
    y="312.15521"><tspan
-     id="tspan30"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'PT Sans';-inkscape-font-specification:'PT Sans'">OpenStreetMap Funding Drive</tspan></text>
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'PT Sans';-inkscape-font-specification:'PT Sans'"
+     id="tspan33">OpenStreetMap Funding Drive</tspan></text>
 
 <text
    class="st12 st13"
    id="text423"
    x="198.42032"
    y="403.065"><tspan
-     id="tspan32"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'PT Sans';-inkscape-font-specification:'PT Sans'">Donate Today!</tspan></text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'PT Sans';-inkscape-font-specification:'PT Sans'"
+     id="tspan35">Donate Today!</tspan></text>
 </svg>
