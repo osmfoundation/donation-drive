@@ -191,7 +191,7 @@ function validateForm( form ) {
     <label class='col12 fl block' for='input_amount_other'>Other amount</label>
   </div>
 
-  <div class='col12 clearfix'>
+  <div class='col12 clearfix space-bottom1'>
     <input type='text' name='amountGiven' class='col5' onfocus='this.form.input_amount_other.checked=true;' />
 
     <!-- currency menu -->
@@ -223,6 +223,10 @@ function validateForm( form ) {
       </select>
     </div>
   </div>
+
+  <div class="col12 grouped-options checkbox">
+    <input type="checkbox" name="monthly" id="monthly"><label for="monthly"> Monthly donation</label>
+  </div>
 </div>
 
 <small class='space-bottom1 block'>Add optional public message</small>
@@ -236,6 +240,7 @@ function validateForm( form ) {
 
 <div class='quiet space-bottom1'>
   Your credit card donation will be processed by PayPal. The charge will appear as "OpenStreetMap Foundation" on your credit card statement.
+  <a href="https://www.paypal.com/us/selfhelp/article/FAQ577/1">Here</a> are instructions for cancelling a monthly payment.
 </div>
 
 <input type='submit' value='Donate' class='col12 space-bottom2' />
