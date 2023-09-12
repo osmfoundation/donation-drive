@@ -1,3 +1,5 @@
+# NOTICE: donate.openstreetmap.org site has been replaced by https://supporting.openstreetmap.org/
+
 # donate.openstreetmap.org website
 
 This repository is the code used for the https://donate.openstreetmap.org/ website.
